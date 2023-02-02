@@ -2,34 +2,99 @@
 //  BinarySearchTests.swift
 //  BinarySearchTests
 //
-//  Created by Klaudius Ivan Anteraja on 02/02/23.
+//  Created by Klaudius Ivan Anteraja on 01/02/23.
 //
 
 import XCTest
 
-final class BinarySearchTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class Solution {
+    // MARK: - Recursive
+    func search(_ nums: [Int], _ target: Int) -> Int {
+        return binarySearch(array: nums, start: 0, end: nums.count - 1, target: target)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    private func binarySearch(array: [Int], start: Int, end: Int, target: Int) -> Int {
+        if start > end { return -1 }
+        
+        let middleIndex = Int((start + end) / 2)
+        
+        if array[middleIndex] == target {
+            return middleIndex
         }
+        else if array[middleIndex] > target {
+            return binarySearch(array: array, start: start, end: middleIndex - 1, target: target)
+        }
+        else {
+            return binarySearch(array: array, start: middleIndex + 1, end: end, target: target)
+        }
+    }
+    
+    // MARK: - Iteration
+    func searchWithIteration(_ nums: [Int], _ target: Int) -> Int {
+        var left = 0
+        var right = nums.count - 1
+        
+        while left <= right {
+           let middle = Int((left+right)/2)
+            
+            if nums[middle] == target {
+                return middle
+            } else if nums[middle] > target {
+                right = middle - 1
+            } else {
+                left = middle + 1
+            }
+        }
+        
+        return -1
+    }
+}
+
+/**
+ Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+
+ You must write an algorithm with O(log n) runtime complexity.
+ */
+final class BinarySearchTests: XCTestCase {
+    
+    func test_search_shouldReturnMinusOneOnEmptyNums() {
+        let sut = Solution()
+        
+        let result = sut.search([], 5)
+        
+        XCTAssertEqual(result, -1)
+    }
+    
+    func test_search_shoulReturnMinusOneOnWrongTarget() {
+        let sut = Solution()
+        
+        let result = sut.search([-4,0,2,4], 5)
+        
+        XCTAssertEqual(result, -1)
+    }
+    
+    func test_search_bigArrayShoulReturnMinusOneOnWrongTarget() {
+        let sut = Solution()
+        
+        let result = sut.search([-1,0,3,5,9,12], 2)
+        
+        XCTAssertEqual(result, -1)
+    }
+    
+    func test_search_shouldReturnZeroWithOneArrayAndRightTarget() {
+        let sut = Solution()
+        
+        let result = sut.search([5], 5)
+        
+        XCTAssertEqual(result, 0)
+    }
+    
+    func test_search_shoulReturnRightIndexWithRightTarget() {
+        let sut = Solution()
+        
+        let result = sut.search([-1,0,3,5,9,12], 9)
+        
+        XCTAssertEqual(result, 4)
     }
 
 }
