@@ -12,19 +12,18 @@ class Solution {
         var left = 0
         var right = nums.count - 1
         
-        var expectedIndex = 0
-        while left < right {
-            expectedIndex = (left+right) / 2
-            if nums[expectedIndex] == target {
-                return expectedIndex
-            } else if nums[expectedIndex] > target {
-                right = expectedIndex - 1
+        while left <= right {
+            let middleIndex = (left+right) / 2
+            if nums[middleIndex] == target {
+                return middleIndex
+            } else if nums[middleIndex] > target {
+                right = middleIndex - 1
             } else {
-                left = expectedIndex + 1
+                left = middleIndex + 1
             }
         }
         
-        return expectedIndex
+        return left
     }
 }
 
@@ -57,5 +56,13 @@ final class SearchInsertPositionTests: XCTestCase {
         let result = sut.searchInsert([1,3,5,6], 2)
         
         XCTAssertEqual(result, 1)
+    }
+    
+    func test_searchInsert_shouldReturnFourTheExpectedIndexOnUnavailableTargetNumberInNums() {
+        let sut = Solution()
+        
+        let result = sut.searchInsert([1,3,5,6], 7)
+        
+        XCTAssertEqual(result, 4)
     }
 }
