@@ -49,4 +49,13 @@ final class SearchInsertPositionTests: XCTestCase {
         
         XCTAssertEqual(result, 2)
     }
+    
+    func test_searchInsert_shouldReturnOneTheExpectedIndexOnUnavailableTargetNumberInNums() {
+        
+        let sut = Solution()
+        
+        let result = sut.searchInsert([1,3,5,6], 2)
+        
+        XCTAssertEqual(result, 1)
+    }
 }
