@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8068405298D57460066DE75 /* SearchInsertPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */; };
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchInsertPositionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
 		F88388F5298BF8C700C401FC /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstBadVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
@@ -19,6 +22,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F80683FF298D57460066DE75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F88388F8298BFD1A00C401FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8068403298D57460066DE75 /* SearchInsertPositionTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */,
+			);
+			path = SearchInsertPositionTests;
+			sourceTree = "<group>";
+		};
 		F88388FC298BFD1A00C401FC /* FirstBadVersionTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +67,7 @@
 			children = (
 				F8EA40DA298BF76300E803A1 /* BinarySearchTests */,
 				F88388FC298BFD1A00C401FC /* FirstBadVersionTests */,
+				F8068403298D57460066DE75 /* SearchInsertPositionTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +77,7 @@
 			children = (
 				F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */,
 				F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */,
+				F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +93,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F8068401298D57460066DE75 /* SearchInsertPositionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8068406298D57460066DE75 /* Build configuration list for PBXNativeTarget "SearchInsertPositionTests" */;
+			buildPhases = (
+				F80683FE298D57460066DE75 /* Sources */,
+				F80683FF298D57460066DE75 /* Frameworks */,
+				F8068400298D57460066DE75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchInsertPositionTests;
+			productName = SearchInsertPositionTests;
+			productReference = F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F88388FA298BFD1A00C401FC /* FirstBadVersionTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F88388FF298BFD1A00C401FC /* Build configuration list for PBXNativeTarget "FirstBadVersionTests" */;
@@ -117,6 +154,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					F8068401298D57460066DE75 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F88388FA298BFD1A00C401FC = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -140,11 +180,19 @@
 			targets = (
 				F8EA40D8298BF76300E803A1 /* BinarySearchTests */,
 				F88388FA298BFD1A00C401FC /* FirstBadVersionTests */,
+				F8068401298D57460066DE75 /* SearchInsertPositionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F8068400298D57460066DE75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F88388F9298BFD1A00C401FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +210,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F80683FE298D57460066DE75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8068405298D57460066DE75 /* SearchInsertPositionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F88388F7298BFD1A00C401FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +237,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F8068407298D57460066DE75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.SearchInsertPositionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8068408298D57460066DE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.SearchInsertPositionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F8838900298BFD1A00C401FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,6 +449,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F8068406298D57460066DE75 /* Build configuration list for PBXNativeTarget "SearchInsertPositionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8068407298D57460066DE75 /* Debug */,
+				F8068408298D57460066DE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F88388FF298BFD1A00C401FC /* Build configuration list for PBXNativeTarget "FirstBadVersionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
