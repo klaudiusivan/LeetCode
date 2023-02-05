@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F8068405298D57460066DE75 /* SearchInsertPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */; };
 		F861E39A298E8919007DCB6F /* SearchOfASortedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */; };
+		F861E3B029900B63007DCB6F /* RotateArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */; };
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
 /* End PBXBuildFile section */
@@ -18,6 +19,8 @@
 		F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
 		F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchOfASortedArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOfASortedArrayTests.swift; sourceTree = "<group>"; };
+		F861E3AD29900B63007DCB6F /* RotateArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotateArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayTests.swift; sourceTree = "<group>"; };
 		F88388F5298BF8C700C401FC /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstBadVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
@@ -33,6 +36,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F861E394298E8919007DCB6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F861E3AA29900B63007DCB6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,6 +82,14 @@
 			path = SearchOfASortedArrayTests;
 			sourceTree = "<group>";
 		};
+		F861E3AE29900B63007DCB6F /* RotateArrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */,
+			);
+			path = RotateArrayTests;
+			sourceTree = "<group>";
+		};
 		F88388FC298BFD1A00C401FC /* FirstBadVersionTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,7 @@
 				F88388FC298BFD1A00C401FC /* FirstBadVersionTests */,
 				F8068403298D57460066DE75 /* SearchInsertPositionTests */,
 				F861E398298E8919007DCB6F /* SearchOfASortedArrayTests */,
+				F861E3AE29900B63007DCB6F /* RotateArrayTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +117,7 @@
 				F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */,
 				F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */,
 				F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */,
+				F861E3AD29900B63007DCB6F /* RotateArrayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +165,23 @@
 			name = SearchOfASortedArrayTests;
 			productName = SearchOfASortedArrayTests;
 			productReference = F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F861E3AC29900B63007DCB6F /* RotateArrayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F861E3B129900B63007DCB6F /* Build configuration list for PBXNativeTarget "RotateArrayTests" */;
+			buildPhases = (
+				F861E3A929900B63007DCB6F /* Sources */,
+				F861E3AA29900B63007DCB6F /* Frameworks */,
+				F861E3AB29900B63007DCB6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RotateArrayTests;
+			productName = RotateArrayTests;
+			productReference = F861E3AD29900B63007DCB6F /* RotateArrayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F88388FA298BFD1A00C401FC /* FirstBadVersionTests */ = {
@@ -197,6 +234,9 @@
 					F861E396298E8919007DCB6F = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F861E3AC29900B63007DCB6F = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F88388FA298BFD1A00C401FC = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -222,6 +262,7 @@
 				F88388FA298BFD1A00C401FC /* FirstBadVersionTests */,
 				F8068401298D57460066DE75 /* SearchInsertPositionTests */,
 				F861E396298E8919007DCB6F /* SearchOfASortedArrayTests */,
+				F861E3AC29900B63007DCB6F /* RotateArrayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +276,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F861E395298E8919007DCB6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F861E3AB29900B63007DCB6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,6 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F861E39A298E8919007DCB6F /* SearchOfASortedArrayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F861E3A929900B63007DCB6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F861E3B029900B63007DCB6F /* RotateArrayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +403,36 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.SearchOfASortedArrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F861E3B229900B63007DCB6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.RotateArrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F861E3B329900B63007DCB6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.RotateArrayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -549,6 +635,15 @@
 			buildConfigurations = (
 				F861E39C298E8919007DCB6F /* Debug */,
 				F861E39D298E8919007DCB6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F861E3B129900B63007DCB6F /* Build configuration list for PBXNativeTarget "RotateArrayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F861E3B229900B63007DCB6F /* Debug */,
+				F861E3B329900B63007DCB6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,7 +12,7 @@
 		<key>BinarySearchTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>FirstBadVersion.xcscheme_^#shared#^_</key>
 		<dict>
@@ -24,6 +24,16 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>RotateArray.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>RotateArrayTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>SearchInsertPosition.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,7 +42,7 @@
 		<key>SearchInsertPositionTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SearchOfASortedArrayTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,6 +57,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F861E3AC29900B63007DCB6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F88388FA298BFD1A00C401FC</key>
 		<dict>
 			<key>primary</key>
