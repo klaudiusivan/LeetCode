@@ -11,6 +11,17 @@ class Solution {
     func rotate(_ nums: inout [Int], _ k: Int) {
         let n = nums.count
     
+        var left = 0
+        var right = nums.count - 1
+        var counter = k
+        
+        while nums.count > 0 && counter > 0 {
+            var temp = nums[right]
+            nums.remove(at: right)
+            nums.insert(temp, at: left)
+            
+            counter -= 1
+        }
     }
 }
 
@@ -35,5 +46,15 @@ final class RotateArrayTests: XCTestCase {
         sut.rotate(&results, 10)
         
         XCTAssertEqual(results, [])
+    }
+    
+    func test_rotate_shouldMoveOneNumberToFrontFromLastIndexWithKOne() {
+        let sut = Solution()
+        
+        var results: [Int] = [1,2,3,4,5,6,7]
+        
+        sut.rotate(&results, 3)
+        
+        XCTAssertEqual(results, [5,6,7,1,2,3,4])
     }
 }
