@@ -71,5 +71,15 @@ final class MoveZeroesTests: XCTestCase {
         
         XCTAssertEqual(results, [1,3,12,0,0])
     }
+    
+    func test_moveZeroes_shouldMoveZeroToTheBackAndKeepTheNumberOrderIn3InputNumbers() {
+        let sut = Solution()
+        
+        var results: [Int] = [0,1,0]
+        
+        sut.moveZeroes(&results)
+        
+        XCTAssertEqual(results, [1,0,0])
+    }
 
 }
