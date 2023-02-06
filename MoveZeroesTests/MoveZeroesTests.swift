@@ -9,19 +9,12 @@ import XCTest
 
 class Solution {
     func moveZeroes(_ nums: inout [Int]) {
-        var left = 0
-        var right = nums.count - 1
+        let zeroArray = Array(repeating: 0, count: nums.reduce(0, { return $1 == 0 ? $0 + 1: $0
+        }))
         
-        while left <= right {
-            if nums[left] == 0 {
-                let temp = nums[left]
-                nums.remove(at: left)
-                nums.insert(temp, at: right)
-                right -= 1
-            } else {
-                left += 1
-            }
-        }
+        nums.removeAll(where: { $0 == 0 })
+        
+        nums += zeroArray
     }
 }
 
