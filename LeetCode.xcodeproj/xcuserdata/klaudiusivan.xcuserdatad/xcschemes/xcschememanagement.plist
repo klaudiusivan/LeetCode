@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>MoveZeroesTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>RotateArray.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -58,6 +63,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>F861E3AC29900B63007DCB6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F861E3B729915E4C007DCB6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
