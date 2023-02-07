@@ -11,7 +11,7 @@
 		F861E39A298E8919007DCB6F /* SearchOfASortedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */; };
 		F861E3B029900B63007DCB6F /* RotateArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */; };
 		F861E3BB29915E4C007DCB6F /* MoveZeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3BA29915E4C007DCB6F /* MoveZeroesTests.swift */; };
-		F861E3C6299276A1007DCB6F /* TwoSumInputArrayIsSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSorted.swift */; };
+		F861E3C6299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift */; };
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
 /* End PBXBuildFile section */
@@ -25,8 +25,8 @@
 		F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateArrayTests.swift; sourceTree = "<group>"; };
 		F861E3B829915E4C007DCB6F /* MoveZeroesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoveZeroesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861E3BA29915E4C007DCB6F /* MoveZeroesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveZeroesTests.swift; sourceTree = "<group>"; };
-		F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSorted.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoSumInputArrayIsSorted.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumInputArrayIsSorted.swift; sourceTree = "<group>"; };
+		F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSortedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoSumInputArrayIsSortedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSumInputArrayIsSortedTests.swift; sourceTree = "<group>"; };
 		F88388F5298BF8C700C401FC /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstBadVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
@@ -118,12 +118,12 @@
 			path = MoveZeroesTests;
 			sourceTree = "<group>";
 		};
-		F861E3C4299276A1007DCB6F /* TwoSumInputArrayIsSorted */ = {
+		F861E3C4299276A1007DCB6F /* TwoSumInputArrayIsSortedTests */ = {
 			isa = PBXGroup;
 			children = (
-				F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSorted.swift */,
+				F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift */,
 			);
-			path = TwoSumInputArrayIsSorted;
+			path = TwoSumInputArrayIsSortedTests;
 			sourceTree = "<group>";
 		};
 		F88388FC298BFD1A00C401FC /* FirstBadVersionTests */ = {
@@ -143,7 +143,7 @@
 				F861E398298E8919007DCB6F /* SearchOfASortedArrayTests */,
 				F861E3AE29900B63007DCB6F /* RotateArrayTests */,
 				F861E3B929915E4C007DCB6F /* MoveZeroesTests */,
-				F861E3C4299276A1007DCB6F /* TwoSumInputArrayIsSorted */,
+				F861E3C4299276A1007DCB6F /* TwoSumInputArrayIsSortedTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 				F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */,
 				F861E3AD29900B63007DCB6F /* RotateArrayTests.xctest */,
 				F861E3B829915E4C007DCB6F /* MoveZeroesTests.xctest */,
-				F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSorted.xctest */,
+				F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSortedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,9 +241,9 @@
 			productReference = F861E3B829915E4C007DCB6F /* MoveZeroesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F861E3C2299276A0007DCB6F /* TwoSumInputArrayIsSorted */ = {
+		F861E3C2299276A0007DCB6F /* TwoSumInputArrayIsSortedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F861E3C9299276A1007DCB6F /* Build configuration list for PBXNativeTarget "TwoSumInputArrayIsSorted" */;
+			buildConfigurationList = F861E3C9299276A1007DCB6F /* Build configuration list for PBXNativeTarget "TwoSumInputArrayIsSortedTests" */;
 			buildPhases = (
 				F861E3BF299276A0007DCB6F /* Sources */,
 				F861E3C0299276A0007DCB6F /* Frameworks */,
@@ -253,9 +253,9 @@
 			);
 			dependencies = (
 			);
-			name = TwoSumInputArrayIsSorted;
+			name = TwoSumInputArrayIsSortedTests;
 			productName = TwoSumInputArrayIsSorted;
-			productReference = F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSorted.xctest */;
+			productReference = F861E3C3299276A0007DCB6F /* TwoSumInputArrayIsSortedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F88388FA298BFD1A00C401FC /* FirstBadVersionTests */ = {
@@ -344,7 +344,7 @@
 				F861E396298E8919007DCB6F /* SearchOfASortedArrayTests */,
 				F861E3AC29900B63007DCB6F /* RotateArrayTests */,
 				F861E3B729915E4C007DCB6F /* MoveZeroesTests */,
-				F861E3C2299276A0007DCB6F /* TwoSumInputArrayIsSorted */,
+				F861E3C2299276A0007DCB6F /* TwoSumInputArrayIsSortedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F861E3C6299276A1007DCB6F /* TwoSumInputArrayIsSorted.swift in Sources */,
+				F861E3C6299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,7 +829,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F861E3C9299276A1007DCB6F /* Build configuration list for PBXNativeTarget "TwoSumInputArrayIsSorted" */ = {
+		F861E3C9299276A1007DCB6F /* Build configuration list for PBXNativeTarget "TwoSumInputArrayIsSortedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F861E3C7299276A1007DCB6F /* Debug */,

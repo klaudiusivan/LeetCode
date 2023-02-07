@@ -59,7 +59,7 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>TwoSumInputArrayIsSorted.xcscheme_^#shared#^_</key>
+		<key>TwoSumInputArrayIsSortedTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
@@ -73,6 +73,11 @@
 			<true/>
 		</dict>
 		<key>F861E3B729915E4C007DCB6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F861E3C2299276A0007DCB6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

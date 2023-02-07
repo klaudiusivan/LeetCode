@@ -1,6 +1,6 @@
 //
-//  TwoSumInputArrayIsSorted.swift
-//  TwoSumInputArrayIsSorted
+//  TwoSumInputArrayIsSortedTests.swift
+//  TwoSumInputArrayIsSortedTests
 //
 //  Created by Klaudius Ivan Anteraja on 07/02/23.
 //
@@ -9,7 +9,7 @@ import XCTest
 
 class Solution {
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
-        
+        return []
     }
 }
 
@@ -41,6 +41,13 @@ class Solution {
  Output: [1,2]
  Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
  */
-final class TwoSumInputArrayIsSorted: XCTestCase {
+final class TwoSumInputArrayIsSortedTests: XCTestCase {
 
+    func test_twoSum_shouldReturnEmptyArrayWithEmptyInput() {
+        let sut = Solution()
+        
+        let result = sut.twoSum([], 10)
+        
+        XCTAssertEqual(result, [])
+    }
 }
