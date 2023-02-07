@@ -70,4 +70,12 @@ final class TwoSumInputArrayIsSortedTests: XCTestCase {
         
         XCTAssertEqual(result, [1,2])
     }
+    
+    func test_twoSum_shouldReturnIndex1AndIndex2WhenInputMoreThanTwoNumbersArray() {
+        let sut = Solution()
+        
+        let result = sut.twoSum([2,7,11,15], 9)
+        
+        XCTAssertEqual(result, [1,2])
+    }
 }
