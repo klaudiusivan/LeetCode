@@ -9,7 +9,19 @@ import XCTest
 
 class Solution {
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+        var left = 0
+        var right = numbers.count - 1
+        while left <= right {
+            if numbers[left] + numbers[right] > target {
+                right -= 1
+            } else if numbers[left] + numbers[right] < target {
+                left += 1
+            } else {
+                return [left + 1, right + 1]
+            }
+        }
         return []
+       
     }
 }
 
@@ -49,5 +61,13 @@ final class TwoSumInputArrayIsSortedTests: XCTestCase {
         let result = sut.twoSum([], 10)
         
         XCTAssertEqual(result, [])
+    }
+    
+    func test_twoSum_shouldReturnIndex1AndIndex2WhenInputTwoNumbersArrayZeroAndNotZeroNumbers() {
+        let sut = Solution()
+        
+        let result = sut.twoSum([-3,0], -3)
+        
+        XCTAssertEqual(result, [1,2])
     }
 }
