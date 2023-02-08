@@ -31,5 +31,13 @@ class Solution {
  */
 final class ReverseStringTests: XCTestCase {
 
-    
+    func test_reverseString_shouldResultEmptyArrayWithEmptyArrayInput() {
+        let sut = Solution()
+        
+        var strings: [Character] = []
+        
+        sut.reverseString(&strings)
+        
+        XCTAssertEqual(strings, [])
+    }
 }
