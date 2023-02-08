@@ -39,8 +39,6 @@ class Solution {
 /**
  Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
-  
-
  Example 1:
 
  Input: s = "Let's take LeetCode contest"
@@ -67,5 +65,13 @@ final class ReverseWordsinaStringIIITests: XCTestCase {
         let result = sut.reverseWords("God Ding")
         
         XCTAssertEqual(result, "doG gniD")
+    }
+    
+    func test_reverseWords_shouldReverse_LetsTakeLeetCodeContest_steLekatedoCteeLtsetnoc() {
+        let sut = Solution()
+        
+        let result = sut.reverseWords("Let's take LeetCode contest")
+        
+        XCTAssertEqual(result, "s'teL ekat edoCteeL tsetnoc")
     }
 }
