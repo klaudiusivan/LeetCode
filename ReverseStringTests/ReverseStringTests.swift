@@ -8,8 +8,19 @@
 import XCTest
 
 class Solution {
+    
+    ///using O(1) algorithm because change array at a time
     func reverseString(_ s: inout [Character]) {
+        var left = 0
+        var right = s.count - 1
         
+        while left < right {
+            let temp = s[right]
+            s[right] = s[left]
+            s[left] = temp
+            left += 1
+            right -= 1
+        }
     }
 }
 
@@ -39,5 +50,25 @@ final class ReverseStringTests: XCTestCase {
         sut.reverseString(&strings)
         
         XCTAssertEqual(strings, [])
+    }
+    
+    func test_reverseString_shouldReverseString_hello_Result_olleh_() {
+        let sut = Solution()
+        
+        var strings: [Character] = ["h","e","l","l","o"]
+        
+        sut.reverseString(&strings)
+        
+        XCTAssertEqual(strings, ["o","l","l","e","h"])
+    }
+    
+    func test_reverseString_shouldReverseString_Hannah_Result_hannaH() {
+        let sut = Solution()
+        
+        var strings: [Character] = ["H","a","n","n","a","h"]
+        
+        sut.reverseString(&strings)
+        
+        XCTAssertEqual(strings, ["h","a","n","n","a","H"])
     }
 }
