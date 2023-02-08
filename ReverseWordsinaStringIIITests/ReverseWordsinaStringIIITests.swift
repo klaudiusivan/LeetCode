@@ -8,8 +8,31 @@
 import XCTest
 
 class Solution {
+    
     func reverseWords(_ s: String) -> String {
-        return ""
+        
+        let words = s.split(separator: " ")
+        
+        let reversedWords = words.map({
+            var temp = Array($0)
+            reverseString(&temp)
+            return String(temp)
+        })
+        
+        return reversedWords.joined(separator: " ")
+    }
+    
+    private func reverseString(_ s: inout [Character]) {
+        var left = 0
+        var right = s.count - 1
+        
+        while left < right {
+            let temp = s[right]
+            s[right] = s[left]
+            s[left] = temp
+            left += 1
+            right -= 1
+        }
     }
 }
 
@@ -31,11 +54,18 @@ class Solution {
 final class ReverseWordsinaStringIIITests: XCTestCase {
 
     func test_reverseWords_shouldReturnEmptyStringOnEmptyInput() {
-        
         let sut = Solution()
         
         let result = sut.reverseWords("")
         
         XCTAssertEqual(result, "")
+    }
+    
+    func test_reverseWords_shouldReverseWordInTheSameOrder() {
+        let sut = Solution()
+        
+        let result = sut.reverseWords("God Ding")
+        
+        XCTAssertEqual(result, "doG gniD")
     }
 }
