@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1420"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8EA40D8298BF76300E803A1"
+               BuildableName = "BinarySearchTests.xctest"
+               BlueprintName = "BinarySearchTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F88388FA298BFD1A00C401FC"
+               BuildableName = "FirstBadVersionTests.xctest"
+               BlueprintName = "FirstBadVersionTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F81FEEAB29952F1700FB85C8"
+               BuildableName = "MiddleoftheLinkedListTests.xctest"
+               BlueprintName = "MiddleoftheLinkedListTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F861E3B729915E4C007DCB6F"
+               BuildableName = "MoveZeroesTests.xctest"
+               BlueprintName = "MoveZeroesTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F81FEE812993DCC600FB85C8"
+               BuildableName = "ReverseStringTests.xctest"
+               BlueprintName = "ReverseStringTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F81FEE8C2993E00200FB85C8"
+               BuildableName = "ReverseWordsinaStringIIITests.xctest"
+               BlueprintName = "ReverseWordsinaStringIIITests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F861E3AC29900B63007DCB6F"
+               BuildableName = "RotateArrayTests.xctest"
+               BlueprintName = "RotateArrayTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8068401298D57460066DE75"
+               BuildableName = "SearchInsertPositionTests.xctest"
+               BlueprintName = "SearchInsertPositionTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F861E396298E8919007DCB6F"
+               BuildableName = "SearchOfASortedArrayTests.xctest"
+               BlueprintName = "SearchOfASortedArrayTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F861E3C2299276A0007DCB6F"
+               BuildableName = "TwoSumInputArrayIsSortedTests.xctest"
+               BlueprintName = "TwoSumInputArrayIsSortedTests"
+               ReferencedContainer = "container:LeetCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
