@@ -19,7 +19,15 @@ import XCTest
  
 class Solution {
     func middleNode(_ head: ListNode?) -> ListNode? {
-        nil
+        var slow = head
+        var fast = head
+        
+        while fast?.next != nil && fast?.next?.next != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        
+        return slow
     }
 }
 
@@ -50,6 +58,16 @@ final class MiddleoftheLinkedListTests: XCTestCase {
         let result = sut.middleNode(nil)
         
         XCTAssertNil(result)
+    }
+    
+    func test_middleNode_shouldReturnTheHalfElementOfOddList() {
+        let sut = Solution()
+        let head = ListNode(1, .init(2, .init(3, .init(4, .init(5)))))
+        
+        
+        let result = sut.middleNode(head)
+        
+        XCTAssertEqual(result?.val, 3)
     }
     
 }
