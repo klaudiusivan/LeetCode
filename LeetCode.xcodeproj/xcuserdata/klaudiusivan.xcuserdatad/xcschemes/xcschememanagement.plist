@@ -12,17 +12,22 @@
 		<key>BinarySearchTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>5</integer>
 		</dict>
 		<key>FirstBadVersionTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>LeetCode.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>MiddleoftheLinkedListTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>MoveZeroesTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,12 +37,12 @@
 		<key>ReverseStringTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>ReverseWordsinaStringIIITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
 		<key>RotateArray.xcscheme_^#shared#^_</key>
 		<dict>
@@ -62,7 +67,7 @@
 		<key>SearchOfASortedArrayTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>SquaresOfASortedArray.xcscheme_^#shared#^_</key>
 		<dict>
