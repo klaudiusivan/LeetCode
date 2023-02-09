@@ -10,7 +10,8 @@ import XCTest
 class Solution {
     func rotate(_ nums: inout [Int], _ k: Int) {
         var counter = k
-        
+        let left = 0
+        let right = nums.count - 1
         while nums.count > 0 && counter > 0 {
             let temp = nums[right]
             nums.remove(at: right)
