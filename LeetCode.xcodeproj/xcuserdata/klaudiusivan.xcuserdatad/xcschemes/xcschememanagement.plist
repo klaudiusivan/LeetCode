@@ -7,7 +7,7 @@
 		<key>All Tests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>4</integer>
 		</dict>
 		<key>BinarySearch.xcscheme_^#shared#^_</key>
 		<dict>
@@ -38,6 +38,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>RemoveNthNodeFromEndofListTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>ReverseStringTests.xcscheme_^#shared#^_</key>
 		<dict>
