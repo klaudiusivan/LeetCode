@@ -14,9 +14,12 @@ class Solution {
         var maximumCount = 0
         for character in s.enumerated() {
             if uniqueSubstring.contains(character.element) {
-                uniqueSubstring.removeFirst()
-                if !uniqueSubstring.contains(character.element) {
-                    uniqueSubstring.append(character.element)
+                while true {
+                    uniqueSubstring.removeFirst()
+                    if !uniqueSubstring.contains(character.element) {
+                        uniqueSubstring.append(character.element)
+                        break
+                    }
                 }
             } else {
                 uniqueSubstring.append(character.element)
@@ -85,5 +88,13 @@ final class LongestSubstringWithoutRepeatingCharactersTests: XCTestCase {
         let result = sut.lengthOfLongestSubstring("pwwkew")
         
         XCTAssertEqual(result, 3)
+    }
+    
+    func test_lengthOfLongestSubstring_shouldReturn5OnInput_qrsvbspk_() {
+        let sut = Solution()
+        
+        let result = sut.lengthOfLongestSubstring("qrsvbspk")
+        
+        XCTAssertEqual(result, 5)
     }
 }
