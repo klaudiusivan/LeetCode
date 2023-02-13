@@ -12,6 +12,7 @@
 		F81FEE902993E00200FB85C8 /* ReverseWordsinaStringIIITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEE8F2993E00200FB85C8 /* ReverseWordsinaStringIIITests.swift */; };
 		F81FEEAF29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEEAE29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift */; };
 		F81FEEBA2996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEEB92996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift */; };
+		F85D60F9299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D60F8299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
 		F861E39A298E8919007DCB6F /* SearchOfASortedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */; };
 		F861E3B029900B63007DCB6F /* RotateArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */; };
 		F861E3BB29915E4C007DCB6F /* MoveZeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3BA29915E4C007DCB6F /* MoveZeroesTests.swift */; };
@@ -31,6 +32,8 @@
 		F81FEEAE29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleoftheLinkedListTests.swift; sourceTree = "<group>"; };
 		F81FEEB72996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoveNthNodeFromEndofListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81FEEB92996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNthNodeFromEndofListTests.swift; sourceTree = "<group>"; };
+		F85D60F6299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongestSubstringWithoutRepeatingCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85D60F8299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestSubstringWithoutRepeatingCharactersTests.swift; sourceTree = "<group>"; };
 		F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchOfASortedArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOfASortedArrayTests.swift; sourceTree = "<group>"; };
 		F861E3AD29900B63007DCB6F /* RotateArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotateArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +78,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F81FEEB42996A5C600FB85C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85D60F3299A95470013098C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,6 +176,14 @@
 			path = RemoveNthNodeFromEndofListTests;
 			sourceTree = "<group>";
 		};
+		F85D60F7299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F85D60F8299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift */,
+			);
+			path = LongestSubstringWithoutRepeatingCharactersTests;
+			sourceTree = "<group>";
+		};
 		F861E398298E8919007DCB6F /* SearchOfASortedArrayTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +238,7 @@
 				F81FEE8E2993E00200FB85C8 /* ReverseWordsinaStringIIITests */,
 				F81FEEAD29952F1800FB85C8 /* MiddleoftheLinkedListTests */,
 				F81FEEB82996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests */,
+				F85D60F7299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +257,7 @@
 				F81FEE8D2993E00200FB85C8 /* ReverseWordsinaStringIIITests.xctest */,
 				F81FEEAC29952F1700FB85C8 /* MiddleoftheLinkedListTests.xctest */,
 				F81FEEB72996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.xctest */,
+				F85D60F6299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,6 +356,23 @@
 			name = RemoveNthNodeFromEndofListTests;
 			productName = RemoveNthNodeFromEndofListTests;
 			productReference = F81FEEB72996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F85D60F5299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85D60FC299A95470013098C /* Build configuration list for PBXNativeTarget "LongestSubstringWithoutRepeatingCharactersTests" */;
+			buildPhases = (
+				F85D60F2299A95470013098C /* Sources */,
+				F85D60F3299A95470013098C /* Frameworks */,
+				F85D60F4299A95470013098C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LongestSubstringWithoutRepeatingCharactersTests;
+			productName = LongestSubstringWithoutRepeatingCharactersTests;
+			productReference = F85D60F6299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F861E396298E8919007DCB6F /* SearchOfASortedArrayTests */ = {
@@ -465,6 +502,9 @@
 					F81FEEB62996A5C600FB85C8 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F85D60F5299A95470013098C = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F861E396298E8919007DCB6F = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -509,6 +549,7 @@
 				F81FEE8C2993E00200FB85C8 /* ReverseWordsinaStringIIITests */,
 				F81FEEAB29952F1700FB85C8 /* MiddleoftheLinkedListTests */,
 				F81FEEB62996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests */,
+				F85D60F5299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -543,6 +584,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F81FEEB52996A5C600FB85C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85D60F4299A95470013098C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -631,6 +679,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81FEEBA2996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85D60F2299A95470013098C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85D60F9299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +885,36 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.RemoveNthNodeFromEndofListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F85D60FA299A95470013098C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.LongestSubstringWithoutRepeatingCharactersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F85D60FB299A95470013098C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.LongestSubstringWithoutRepeatingCharactersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1178,6 +1264,15 @@
 			buildConfigurations = (
 				F81FEEBB2996A5C600FB85C8 /* Debug */,
 				F81FEEBC2996A5C600FB85C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85D60FC299A95470013098C /* Build configuration list for PBXNativeTarget "LongestSubstringWithoutRepeatingCharactersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85D60FA299A95470013098C /* Debug */,
+				F85D60FB299A95470013098C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
