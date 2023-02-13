@@ -9,30 +9,23 @@ import XCTest
 
 class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
-        var array = Array(s)
-        var left = 0
-        var right = array.count - 1
-        var uniqueHash: [Character: Int] = [:]
+        var uniqueSubstring: [Character] = []
         
-        
-        while left < right {
-            if uniqueHash[array[left]] == nil {
-               uniqueHash[array[left]] = 1
+        var maximumCount = 0
+        for character in s.enumerated() {
+            if uniqueSubstring.contains(character.element) {
+                uniqueSubstring.removeFirst()
+                if !uniqueSubstring.contains(character.element) {
+                    uniqueSubstring.append(character.element)
+                }
             } else {
-                uniqueHash[array[left]]! += 1
+                uniqueSubstring.append(character.element)
             }
-            
-            if uniqueHash[array[right]] == nil {
-                uniqueHash[array[right]] = 1
-            } else {
-                uniqueHash[array[right]]! += 1
-            }
-            
-            left += 1
-            right -= 1
+                        
+            maximumCount = max(uniqueSubstring.count, maximumCount)
         }
         
-        return uniqueHash.count
+        return maximumCount
     }
 }
 /**
@@ -84,5 +77,13 @@ final class LongestSubstringWithoutRepeatingCharactersTests: XCTestCase {
         let result = sut.lengthOfLongestSubstring("aaafasdfasdcccasfsfaaaaa")
         
         XCTAssertEqual(result, 5)
+    }
+    
+    func test_lengthOfLongestSubstring_shouldReturnFourOnEventCountDuplicateMultipleCharacter() {
+        let sut = Solution()
+        
+        let result = sut.lengthOfLongestSubstring("pwwkew")
+        
+        XCTAssertEqual(result, 3)
     }
 }
