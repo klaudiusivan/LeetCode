@@ -77,4 +77,12 @@ final class LongestSubstringWithoutRepeatingCharactersTests: XCTestCase {
         
         XCTAssertEqual(result, 1)
     }
+    
+    func test_lengthOfLongestSubstring_shouldReturnOneOnDuplicateMultipleCharacter() {
+        let sut = Solution()
+        
+        let result = sut.lengthOfLongestSubstring("aaafasdfasdcccasfsfaaaaa")
+        
+        XCTAssertEqual(result, 5)
+    }
 }
