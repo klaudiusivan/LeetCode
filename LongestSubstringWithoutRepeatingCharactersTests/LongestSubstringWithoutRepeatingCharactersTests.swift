@@ -90,7 +90,7 @@ final class LongestSubstringWithoutRepeatingCharactersTests: XCTestCase {
         XCTAssertEqual(result, 3)
     }
     
-    func test_lengthOfLongestSubstring_shouldReturn5OnInput_qrsvbspk_() {
+    func test_lengthOfLongestSubstring_shouldReturn5OnInput_qrsvbspk() {
         let sut = Solution()
         
         let result = sut.lengthOfLongestSubstring("qrsvbspk")
