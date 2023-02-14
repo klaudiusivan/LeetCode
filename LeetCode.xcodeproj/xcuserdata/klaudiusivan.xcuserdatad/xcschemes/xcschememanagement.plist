@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>PermutationInStringTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>RemoveNthNodeFromEndofListTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
