@@ -9,8 +9,33 @@ import XCTest
 
 class Solution {
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
+        
+        for word in permutations(of: s1) {
+            if s2.contains(word) {
+                return true
+            }
+        }
+        
         return false
     }
+    
+    func permutations(of string: String, current: String = "") -> [String] {
+        var result = [String]()
+        let length = string.count
+        if length == 0 {
+            result.append(current)
+            return result
+        }
+        for i in 0..<length {
+            let index = string.index(string.startIndex, offsetBy: i)
+            let char = string[index]
+            let left = String(string[string.startIndex..<index])
+            let right = String(string[string.index(after: index)..<string.endIndex])
+            result += permutations(of: left + right, current: current + String(char))
+        }
+        return result
+    }
+
 }
 
 /**
@@ -44,5 +69,13 @@ final class PermutationInStringTests: XCTestCase {
         let result = sut.checkInclusion("ab", "eidboaoo")
         
         XCTAssertFalse(result)
+    }
+    
+    func test_checkInclusion_shouldReturnTrueOn_ab_eidbaooo() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("ab", "eidbaooo")
+        
+        XCTAssertTrue(result)
     }
 }
