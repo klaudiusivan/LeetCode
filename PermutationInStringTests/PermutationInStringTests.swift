@@ -37,4 +37,12 @@ final class PermutationInStringTests: XCTestCase {
         
         XCTAssertFalse(result)
     }
+    
+    func test_checkInclusion_shouldReturnFalseOn_ab_eidboaoo() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("ab", "eidboaoo")
+        
+        XCTAssertFalse(result)
+    }
 }
