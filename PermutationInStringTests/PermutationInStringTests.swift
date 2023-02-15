@@ -12,7 +12,7 @@ class Solution {
     ///window sliding solution
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         
-        guard s1.count < s2.count else {
+        guard s1.count <= s2.count else {
             return false
         }
         
@@ -77,6 +77,14 @@ final class PermutationInStringTests: XCTestCase {
         let sut = Solution()
         
         let result = sut.checkInclusion("ab", "eidbaooo")
+        
+        XCTAssertTrue(result)
+    }
+    
+    func test_checkInclusion_shouldReturnTrueOn_ab_ba() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("ab", "ba")
         
         XCTAssertTrue(result)
     }
