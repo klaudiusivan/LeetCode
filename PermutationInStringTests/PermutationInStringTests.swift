@@ -8,34 +8,36 @@
 import XCTest
 
 class Solution {
+    
+    ///window sliding solution
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         
-        for word in permutations(of: s1) {
-            if s2.contains(word) {
-                return true
-            }
+        guard s1.count < s2.count else {
+            return false
         }
         
-        return false
+        var s1Count = Array(repeating: 0, count: 26)
+        var s2Count = Array(repeating: 0, count: 26)
+        for index in 0 ..< s1.count {
+            s1Count[alphabethIndex(of: Array(s1)[index])] += 1
+            s2Count[alphabethIndex(of: Array(s2)[index])] += 1
+        }
+        
+        for index in 0 ..< (s2.count - s1.count) {
+            if s1Count == s2Count {
+                return true
+            }
+            
+            s2Count[alphabethIndex(of: Array(s2)[index + s1.count])] += 1
+            s2Count[alphabethIndex(of: Array(s2)[index])] -= 1
+        }
+        
+        return s1Count == s2Count
     }
     
-    func permutations(of string: String, current: String = "") -> [String] {
-        var result = [String]()
-        let length = string.count
-        if length == 0 {
-            result.append(current)
-            return result
-        }
-        for i in 0..<length {
-            let index = string.index(string.startIndex, offsetBy: i)
-            let char = string[index]
-            let left = String(string[string.startIndex..<index])
-            let right = String(string[string.index(after: index)..<string.endIndex])
-            result += permutations(of: left + right, current: current + String(char))
-        }
-        return result
+    func alphabethIndex(of character: Character) -> Int {
+        Int(character.asciiValue!) - Int(Character("a").asciiValue!)
     }
-
 }
 
 /**
@@ -77,5 +79,13 @@ final class PermutationInStringTests: XCTestCase {
         let result = sut.checkInclusion("ab", "eidbaooo")
         
         XCTAssertTrue(result)
+    }
+    
+    func test_checkInclusion_shouldPassTheTimeLimit() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("prosperity", "properties")
+        
+        XCTAssertFalse(result)
     }
 }
