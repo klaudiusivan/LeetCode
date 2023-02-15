@@ -7,6 +7,15 @@
 
 import XCTest
 
+//        ab cdeba
+//        01 23410
+//             l r
+//     s1 abcdefghijklmnopqrstuvwxyz
+//        11000000000000000000000000
+//     s2 abcdefghijklmnopqrstuvwxyz
+//        11000000000000000000000000
+//
+//        identicCounter 26
 class Solution {
     
     ///window sliding solution
@@ -15,62 +24,69 @@ class Solution {
         guard s1.count <= s2.count else {
             return false
         }
+        let alphabethCount = 26
+        let a_asciiValue:UInt32 = 97
+        var s1Chars = Array(s1.unicodeScalars)
+        var s2Chars = Array(s2.unicodeScalars)
+        let length1 = s1Chars.count
+        let length2 = s2Chars.count
+        var counts = Array(repeating: 0, count: alphabethCount)
         
-        var s1Count = Array(repeating: 0, count: 26)
-        var s2Count = Array(repeating: 0, count: 26)
-        for index in 0 ..< s1.count {
-            s1Count[alphabethIndex(of: Array(s1)[index])] += 1
-            s2Count[alphabethIndex(of: Array(s2)[index])] += 1
+        for i in 0 ..< length1 {
+            counts [Int(s1Chars[i].value - a_asciiValue)] += 1
+            counts [Int(s2Chars[i].value - a_asciiValue)] -= 1
         }
+        if allZero(counts) { return true }
         
-        var identicCounter = 0
-        for index in 0 ..< 26 {
-            if s1Count[index] == s2Count[index] {
-                identicCounter += 1
-            }
+        for i in length1 ..< length2 {
+            counts[Int(s2Chars[i].value - a_asciiValue)] -= 1
+            counts[Int(s2Chars[i - length1].value - a_asciiValue)] += 1
+            if allZero(counts) { return true }
         }
-        
-//        ab cdeba
-//        01 23410
-//             l r
-//     s1 a bcdefghijklmnopqrstuvwxyz
-//        1 1000000000000000000000000
-//     s2 a bcdefghijklmnopqrstuvwxyz
-//        1 1000000000000000000000000
-//
-//        identicCounter 26
-        for index in 0 ..< (s2.count - s1.count) {
-            let left = alphabethIndex(of: Array(s2)[index])
-            let right = alphabethIndex(of: Array(s2)[index + s1.count])
-            
-            if identicCounter == 26 {
-                return true
-            }
-            
-            s2Count[right] += 1
-            
-            if s2Count[right] == s1Count[right] {
-                identicCounter += 1
-            } else if s2Count[right] == s1Count[right] + 1 {
-                identicCounter -= 1
-            }
-            
-            s2Count[left] -= 1
-            
-            if s2Count[left] == s1Count[left] {
-                identicCounter += 1
-            } else if s2Count[left] == s2Count[left] - 1{
-                identicCounter -= 1
-            }
-        }
-        
-        return identicCounter == 26
+        return false
     }
-    
+    func allZero(_ counts: [Int]) -> Bool {
+        for i in 0 ..< 26 {
+            if counts[i] != 0 {
+                return false
+            }
+        }
+        return true
+    }
     func alphabethIndex(of character: Character) -> Int {
-        Int(character.asciiValue!) - Int(Character("a").asciiValue!)
+        Int(character.asciiValue!-Character("a").asciiValue!)
     }
 }
+
+/*
+ func checkInclusion(_ s1: String, _ s2: String) -> Bool {
+     
+     if s1.count > s2.count {
+         return false
+     }
+     let alphabethCount = 26
+     
+     let target = s1.reduce(into: Array(repeating: 0, count: alphabethCount)) { $0[alphabethIndex(of: $1)] += 1 }
+     let mask = s1.reduce(into: Array(repeating: 0, count: alphabethCount)) { $0[alphabethIndex(of: $1)] = 1 }
+     
+     
+     var window = Array(repeating: 0, count: alphabethCount)
+     var stack = [Character]()
+     
+     var ok: Bool {
+         (0..<alphabethCount).allSatisfy({ mask[$0] == 0 || target[$0] == window[$0] })
+     }
+     
+     for c in s2 {
+         window[alphabethIndex(of: c)] += 1
+         stack.append(c)
+         if stack.count > s1.count { window[alphabethIndex(of: stack.removeFirst())] -= 1 }
+         if ok { break }
+     }
+     return ok
+ }
+ 
+ */
 
 /**
  Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
@@ -133,6 +149,14 @@ final class PermutationInStringTests: XCTestCase {
         let sut = Solution()
         
         let result = sut.checkInclusion("prosperity", "properties")
+        
+        XCTAssertFalse(result)
+    }
+    
+    func test_checkInclusion_shouldReturnFalseOn_hello_ooolleoooleh() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("hello", "ooolleoooleh")
         
         XCTAssertFalse(result)
     }
