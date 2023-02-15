@@ -23,16 +23,48 @@ class Solution {
             s2Count[alphabethIndex(of: Array(s2)[index])] += 1
         }
         
+        var identicCounter = 0
+        for index in 0 ..< 26 {
+            if s1Count[index] == s2Count[index] {
+                identicCounter += 1
+            }
+        }
+        
+//        ab cdeba
+//        01 23410
+//             l r
+//     s1 a bcdefghijklmnopqrstuvwxyz
+//        1 1000000000000000000000000
+//     s2 a bcdefghijklmnopqrstuvwxyz
+//        1 1000000000000000000000000
+//
+//        identicCounter 26
         for index in 0 ..< (s2.count - s1.count) {
-            if s1Count == s2Count {
+            let left = alphabethIndex(of: Array(s2)[index])
+            let right = alphabethIndex(of: Array(s2)[index + s1.count])
+            
+            if identicCounter == 26 {
                 return true
             }
             
-            s2Count[alphabethIndex(of: Array(s2)[index + s1.count])] += 1
-            s2Count[alphabethIndex(of: Array(s2)[index])] -= 1
+            s2Count[right] += 1
+            
+            if s2Count[right] == s1Count[right] {
+                identicCounter += 1
+            } else if s2Count[right] == s1Count[right] + 1 {
+                identicCounter -= 1
+            }
+            
+            s2Count[left] -= 1
+            
+            if s2Count[left] == s1Count[left] {
+                identicCounter += 1
+            } else if s2Count[left] == s2Count[left] - 1{
+                identicCounter -= 1
+            }
         }
         
-        return s1Count == s2Count
+        return identicCounter == 26
     }
     
     func alphabethIndex(of character: Character) -> Int {
@@ -57,12 +89,12 @@ class Solution {
  */
 final class PermutationInStringTests: XCTestCase {
 
-    func test_checkInclusion_shouldReturnFalseOnTwoEmptyInput() {
+    func test_checkInclusion_shouldReturnTrueOnTwoEmptyInput() {
         let sut = Solution()
         
         let result = sut.checkInclusion("", "")
         
-        XCTAssertFalse(result)
+        XCTAssertTrue(result)
     }
     
     func test_checkInclusion_shouldReturnFalseOn_ab_eidboaoo() {
@@ -85,6 +117,14 @@ final class PermutationInStringTests: XCTestCase {
         let sut = Solution()
         
         let result = sut.checkInclusion("ab", "ba")
+        
+        XCTAssertTrue(result)
+    }
+    
+    func test_checkInclusion_shouldReturnTrueOn_ab_cdeba() {
+        let sut = Solution()
+        
+        let result = sut.checkInclusion("ab", "cdeba")
         
         XCTAssertTrue(result)
     }
