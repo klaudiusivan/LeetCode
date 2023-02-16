@@ -25,22 +25,22 @@ class Solution {
             return false
         }
         let alphabethCount = 26
-        let a_asciiValue:UInt32 = 97
         var s1Chars = Array(s1.unicodeScalars)
         var s2Chars = Array(s2.unicodeScalars)
+        
         let length1 = s1Chars.count
         let length2 = s2Chars.count
         var counts = Array(repeating: 0, count: alphabethCount)
         
         for i in 0 ..< length1 {
-            counts [Int(s1Chars[i].value - a_asciiValue)] += 1
-            counts [Int(s2Chars[i].value - a_asciiValue)] -= 1
+            counts [alphabethIndex(of: s1Chars[i])] += 1
+            counts [alphabethIndex(of: s2Chars[i])] -= 1
         }
         if allZero(counts) { return true }
         
         for i in length1 ..< length2 {
-            counts[Int(s2Chars[i].value - a_asciiValue)] -= 1
-            counts[Int(s2Chars[i - length1].value - a_asciiValue)] += 1
+            counts[alphabethIndex(of: s2Chars[i])] -= 1
+            counts[alphabethIndex(of: s2Chars[i - length1])] += 1
             if allZero(counts) { return true }
         }
         return false
@@ -53,8 +53,8 @@ class Solution {
         }
         return true
     }
-    func alphabethIndex(of character: Character) -> Int {
-        Int(character.asciiValue!-Character("a").asciiValue!)
+    func alphabethIndex(of character: String.UnicodeScalarView.Element) -> Int {
+        Int(character.value - 97)
     }
 }
 
