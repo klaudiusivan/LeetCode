@@ -37,6 +37,10 @@ class Solution {
             counts [alphabethIndex(of: s2Chars[i])] -= 1
         }
         if allZero(counts) { return true }
+        //ab cdeab
+        //     l r
+        //abcdefghijklmnopqrstuvwxyz
+        //00000000000000000000000000
         
         for i in length1 ..< length2 {
             counts[alphabethIndex(of: s2Chars[i])] -= 1
@@ -57,36 +61,6 @@ class Solution {
         Int(character.value - 97)
     }
 }
-
-/*
- func checkInclusion(_ s1: String, _ s2: String) -> Bool {
-     
-     if s1.count > s2.count {
-         return false
-     }
-     let alphabethCount = 26
-     
-     let target = s1.reduce(into: Array(repeating: 0, count: alphabethCount)) { $0[alphabethIndex(of: $1)] += 1 }
-     let mask = s1.reduce(into: Array(repeating: 0, count: alphabethCount)) { $0[alphabethIndex(of: $1)] = 1 }
-     
-     
-     var window = Array(repeating: 0, count: alphabethCount)
-     var stack = [Character]()
-     
-     var ok: Bool {
-         (0..<alphabethCount).allSatisfy({ mask[$0] == 0 || target[$0] == window[$0] })
-     }
-     
-     for c in s2 {
-         window[alphabethIndex(of: c)] += 1
-         stack.append(c)
-         if stack.count > s1.count { window[alphabethIndex(of: stack.removeFirst())] -= 1 }
-         if ok { break }
-     }
-     return ok
- }
- 
- */
 
 /**
  Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
