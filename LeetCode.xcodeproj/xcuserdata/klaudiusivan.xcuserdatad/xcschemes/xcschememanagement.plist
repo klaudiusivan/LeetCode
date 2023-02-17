@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>FloodFillTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>LeetCode.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,7 +37,7 @@
 		<key>LongestSubstringWithoutRepeatingCharactersTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>MiddleoftheLinkedListTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,12 +52,12 @@
 		<key>PermutationInStringTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>RemoveNthNodeFromEndofListTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>7</integer>
 		</dict>
 		<key>ReverseStringTests.xcscheme_^#shared#^_</key>
 		<dict>

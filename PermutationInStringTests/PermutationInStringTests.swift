@@ -25,8 +25,8 @@ class Solution {
             return false
         }
         let alphabethCount = 26
-        var s1Chars = Array(s1.unicodeScalars)
-        var s2Chars = Array(s2.unicodeScalars)
+        let s1Chars = Array(s1.unicodeScalars)
+        let s2Chars = Array(s2.unicodeScalars)
         
         let length1 = s1Chars.count
         let length2 = s2Chars.count
