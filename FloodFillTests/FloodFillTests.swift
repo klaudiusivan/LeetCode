@@ -8,7 +8,7 @@
 import XCTest
 class Solution {
     func floodFill(_ image: [[Int]], _ sr: Int, _ sc: Int, _ color: Int) -> [[Int]] {
-        return []
+        return image
     }
 }
 /**
@@ -38,5 +38,13 @@ final class FloodFillTests: XCTestCase {
         let result = sut.floodFill([], 5, 3, 2)
         
         XCTAssertEqual(result, [])
+    }
+    
+    func test_floodFill_shouldReturnZeroOnZeroAllTheInput() {
+        let sut = Solution()
+        
+        let result = sut.floodFill([[0,0,0]], 0, 0, 0)
+        
+        XCTAssertEqual(result, [[0,0,0],[0,0,0]])
     }
 }
