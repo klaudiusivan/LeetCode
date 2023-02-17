@@ -43,8 +43,9 @@ final class FloodFillTests: XCTestCase {
     func test_floodFill_shouldReturnZeroOnZeroAllTheInput() {
         let sut = Solution()
         
-        let result = sut.floodFill([[0,0,0]], 0, 0, 0)
+        let result = sut.floodFill([[0,0,0],[0,0,0]], 0, 0, 0)
         
         XCTAssertEqual(result, [[0,0,0],[0,0,0]])
     }
+    
 }
