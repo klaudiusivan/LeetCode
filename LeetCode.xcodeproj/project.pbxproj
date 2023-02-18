@@ -13,6 +13,7 @@
 		F81FEEAF29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEEAE29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift */; };
 		F81FEEBA2996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEEB92996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift */; };
 		F84717B1299F99D400357D74 /* FloodFillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84717B0299F99D400357D74 /* FloodFillTests.swift */; };
+		F84717BC29A1062700357D74 /* MaxAreaofIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84717BB29A1062700357D74 /* MaxAreaofIslandTests.swift */; };
 		F85D60F9299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85D60F8299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift */; };
 		F861E39A298E8919007DCB6F /* SearchOfASortedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E399298E8919007DCB6F /* SearchOfASortedArrayTests.swift */; };
 		F861E3B029900B63007DCB6F /* RotateArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3AF29900B63007DCB6F /* RotateArrayTests.swift */; };
@@ -36,6 +37,8 @@
 		F81FEEB92996A5C600FB85C8 /* RemoveNthNodeFromEndofListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveNthNodeFromEndofListTests.swift; sourceTree = "<group>"; };
 		F84717AE299F99D400357D74 /* FloodFillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloodFillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84717B0299F99D400357D74 /* FloodFillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloodFillTests.swift; sourceTree = "<group>"; };
+		F84717B929A1062700357D74 /* MaxAreaofIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaxAreaofIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84717BB29A1062700357D74 /* MaxAreaofIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxAreaofIslandTests.swift; sourceTree = "<group>"; };
 		F85D60F6299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LongestSubstringWithoutRepeatingCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85D60F8299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestSubstringWithoutRepeatingCharactersTests.swift; sourceTree = "<group>"; };
 		F861E397298E8919007DCB6F /* SearchOfASortedArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchOfASortedArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F84717AB299F99D400357D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F84717B629A1062700357D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,6 +214,14 @@
 			path = FloodFillTests;
 			sourceTree = "<group>";
 		};
+		F84717BA29A1062700357D74 /* MaxAreaofIslandTests */ = {
+			isa = PBXGroup;
+			children = (
+				F84717BB29A1062700357D74 /* MaxAreaofIslandTests.swift */,
+			);
+			path = MaxAreaofIslandTests;
+			sourceTree = "<group>";
+		};
 		F85D60F7299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +295,7 @@
 				F85D60F7299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */,
 				F8AD3AE6299BC5410040928D /* PermutationInStringTests */,
 				F84717AF299F99D400357D74 /* FloodFillTests */,
+				F84717BA29A1062700357D74 /* MaxAreaofIslandTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -298,6 +317,7 @@
 				F85D60F6299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests.xctest */,
 				F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */,
 				F84717AE299F99D400357D74 /* FloodFillTests.xctest */,
+				F84717B929A1062700357D74 /* MaxAreaofIslandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +433,23 @@
 			name = FloodFillTests;
 			productName = FloodFillTests;
 			productReference = F84717AE299F99D400357D74 /* FloodFillTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F84717B829A1062700357D74 /* MaxAreaofIslandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F84717BD29A1062700357D74 /* Build configuration list for PBXNativeTarget "MaxAreaofIslandTests" */;
+			buildPhases = (
+				F84717B529A1062700357D74 /* Sources */,
+				F84717B629A1062700357D74 /* Frameworks */,
+				F84717B729A1062700357D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaxAreaofIslandTests;
+			productName = MaxAreaofIslandTests;
+			productReference = F84717B929A1062700357D74 /* MaxAreaofIslandTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F85D60F5299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */ = {
@@ -579,6 +616,9 @@
 					F84717AD299F99D400357D74 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F84717B829A1062700357D74 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F85D60F5299A95470013098C = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -632,6 +672,7 @@
 				F85D60F5299A95470013098C /* LongestSubstringWithoutRepeatingCharactersTests */,
 				F8AD3AE4299BC5410040928D /* PermutationInStringTests */,
 				F84717AD299F99D400357D74 /* FloodFillTests */,
+				F84717B829A1062700357D74 /* MaxAreaofIslandTests */,
 			);
 		};
 /* End PBXProject section */
@@ -673,6 +714,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F84717AC299F99D400357D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F84717B729A1062700357D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -783,6 +831,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F84717B1299F99D400357D74 /* FloodFillTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F84717B529A1062700357D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84717BC29A1062700357D74 /* MaxAreaofIslandTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1083,36 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.FloodFillTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F84717BE29A1062700357D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MaxAreaofIslandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F84717BF29A1062700357D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MaxAreaofIslandTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1445,6 +1531,15 @@
 			buildConfigurations = (
 				F84717B2299F99D400357D74 /* Debug */,
 				F84717B3299F99D400357D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F84717BD29A1062700357D74 /* Build configuration list for PBXNativeTarget "MaxAreaofIslandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F84717BE29A1062700357D74 /* Debug */,
+				F84717BF29A1062700357D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
