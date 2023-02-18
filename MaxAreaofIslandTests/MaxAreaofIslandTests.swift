@@ -37,4 +37,12 @@ final class MaxAreaofIslandTests: XCTestCase {
         
         XCTAssertEqual(result, 0)
     }
+    
+    func test_maxAreaOfIsland_returnZeroOnNoIslandInput() {
+        let sut = Solution()
+        
+        let result = sut.maxAreaOfIsland([[0,0,0,0,0,0,0,0]])
+        
+        XCTAssertEqual(result, 0)
+    }
 }
