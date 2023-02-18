@@ -15,9 +15,10 @@ class Solution {
         func dfs(_ r: Int,_ c: Int) -> Int {
             
             if r < 0 || r >= visitedArea.count || c < 0 || c >= visitedArea[0].count || visitedArea[r][c] == 0 || visitedArea[r][c] == 2 {
+                print("not island row \(r) col \(c)")
                 return 0
             }
-            
+            print("island row \(r) col \(c)")
             visitedArea[r][c] = 2
             return 1 + dfs(r-1, c) + dfs(r+1, c) + dfs(r, c-1) + dfs(r, c+1)
         }
@@ -27,6 +28,8 @@ class Solution {
             for column in 0 ..< visitedArea[row].count {
                 if visitedArea[row][column] == 1 {
                     let count = dfs(row, column)
+                    print("count \(count)")
+                    print("result \(result)")
                     result = max(result, count)
                 }
             }
