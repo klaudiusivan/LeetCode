@@ -9,7 +9,30 @@ import XCTest
 
 class Solution {
     func maxAreaOfIsland(_ grid: [[Int]]) -> Int {
-        return 0
+        var result = 0
+        var visitedArea = grid
+        
+        func dfs(_ r: Int,_ c: Int) -> Int {
+            
+            if r < 0 || r >= visitedArea.count || c < 0 || c >= visitedArea[0].count || visitedArea[r][c] == 0 || visitedArea[r][c] == 2 {
+                return 0
+            }
+            
+            visitedArea[r][c] = 2
+            return 1 + dfs(r-1, c) + dfs(r+1, c) + dfs(r, c-1) + dfs(r, c+1)
+        }
+        
+        
+        for row in 0 ..< visitedArea.count {
+            for column in 0 ..< visitedArea[row].count {
+                if visitedArea[row][column] == 1 {
+                    let count = dfs(row, column)
+                    result = max(result, count)
+                }
+            }
+        }
+        
+        return result
     }
 }
 /**
@@ -44,5 +67,23 @@ final class MaxAreaofIslandTests: XCTestCase {
         let result = sut.maxAreaOfIsland([[0,0,0,0,0,0,0,0]])
         
         XCTAssertEqual(result, 0)
+    }
+    
+    func test_maxAreaOfIsland_returnSixOnGivenInput() {
+        let sut = Solution()
+        
+        let result = sut.maxAreaOfIsland(
+            [
+            [0,0,1,0,0,0,0,1,0,0,0,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,1,1,0,1,0,0,0,0,0,0,0,0],
+            [0,1,0,0,1,1,0,0,1,0,1,0,0],
+            [0,1,0,0,1,1,0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0,0,0,0,1,0,0],
+            [0,0,0,0,0,0,0,1,1,1,0,0,0],
+            [0,0,0,0,0,0,0,1,1,0,0,0,0]
+        ])
+        
+        XCTAssertEqual(result, 6)
     }
 }
