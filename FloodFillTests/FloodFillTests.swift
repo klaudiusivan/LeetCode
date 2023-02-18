@@ -8,9 +8,50 @@
 import XCTest
 class Solution {
     func floodFill(_ image: [[Int]], _ sr: Int, _ sc: Int, _ color: Int) -> [[Int]] {
-        return image
+        guard sr >= 0 && sr < image.count else { return image }
+        
+        guard sc >= 0 && sc < image[0].count else { return image }
+        
+        var result = image
+        var queue:[(Int, Int)] = [(sr, sc)]
+        let oldColor = image[sr][sc]
+        
+        if oldColor == color {
+            return result
+        }
+        
+        while !queue.isEmpty {
+            let (row,column) = queue.removeFirst()
+            let selectedPixel = result[row][column]
+            if oldColor == selectedPixel {
+                result[row][column] = color
+                
+                //down
+                if row < image.count - 1 {
+                    queue.append((row+1, column))
+                }
+                
+                //right
+                if column < image[0].count - 1 {
+                    queue.append((row, column+1))
+                }
+                
+                //left
+                if column > 0 {
+                    queue.append((row, column-1))
+                }
+                
+                //top
+                if row > 0 {
+                    queue.append((row-1, column))
+                }
+            }
+            
+        }
+        return result
     }
 }
+
 /**
  An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
 
@@ -30,13 +71,22 @@ class Solution {
  Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
  Output: [[0,0,0],[0,0,0]]
  Explanation: The starting pixel is already colored 0, so no changes are made to the image.
+ 
+ Constraints:
+
+ m == image.length
+ n == image[i].length
+ 1 <= m, n <= 50
+ 0 <= image[i][j], color < 216
+ 0 <= sr < m
+ 0 <= sc < n
  */
 final class FloodFillTests: XCTestCase {
     func test_floodFill_shouldReturnEmptyArrayOnEmptyInput() {
         let sut = Solution()
-        
+
         let result = sut.floodFill([], 5, 3, 2)
-        
+
         XCTAssertEqual(result, [])
     }
     
@@ -46,6 +96,15 @@ final class FloodFillTests: XCTestCase {
         let result = sut.floodFill([[0,0,0],[0,0,0]], 0, 0, 0)
         
         XCTAssertEqual(result, [[0,0,0],[0,0,0]])
+    }
+    
+    func test_floodFIll_shouldReturnTheRightColorOfTheConnectedPixel_WithTargetedColor() {
+        let sut = Solution()
+        
+        let result = sut.floodFill([[0,0,0],[0,0,0]], 0, 0, 1)
+        
+        XCTAssertEqual(result, [[1,1,1],[1,1,1]])
+        
     }
     
 }
