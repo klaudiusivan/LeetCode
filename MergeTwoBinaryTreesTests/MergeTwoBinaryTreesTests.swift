@@ -8,7 +8,13 @@
 import XCTest
 
 // Definition for a binary tree node.
- public class TreeNode {
+public class TreeNode: Equatable {
+    public static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        lhs.val == rhs.val &&
+        lhs.left == rhs.left &&
+        lhs.right == rhs.right
+    }
+    
      public var val: Int
      public var left: TreeNode?
      public var right: TreeNode?
@@ -23,8 +29,22 @@ import XCTest
 
 class Solution {
     func mergeTrees(_ root1: TreeNode?, _ root2: TreeNode?) -> TreeNode? {
-        return nil
+       
+        if root1 == nil {
+            return root2
+        }
+        
+        if root2 == nil {
+            return root1
+        }
+        
+        root1?.val += (root2?.val ?? 0)
+        root1?.left = mergeTrees(root1?.left, root2?.left)
+        root1?.right = mergeTrees(root1?.right, root2?.right)
+        return root1
     }
+    
+    
 }
 
 /**
@@ -52,5 +72,12 @@ final class MergeTwoBinaryTreesTests: XCTestCase {
         XCTAssertNil(result)
     }
     
+    func test_mergeTrees_shouldReturnMergeTreesOfTwoInput() {
+        let sut = Solution()
+        
+        let result = sut.mergeTrees(.init(1), .init(1, .init(2), nil))
+        
+        XCTAssertEqual(result, TreeNode(2, TreeNode(2), nil))
+    }
     
 }
