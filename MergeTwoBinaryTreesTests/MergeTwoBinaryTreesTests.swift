@@ -29,21 +29,34 @@ public class TreeNode: Equatable {
 
 class Solution {
     func mergeTrees(_ root1: TreeNode?, _ root2: TreeNode?) -> TreeNode? {
-       
         if root1 == nil {
             return root2
         }
         
-        if root2 == nil {
-            return root1
-        }
+        var queue: [(TreeNode?, TreeNode?)] = [(root1,root2)]
         
-        root1?.val += (root2?.val ?? 0)
-        root1?.left = mergeTrees(root1?.left, root2?.left)
-        root1?.right = mergeTrees(root1?.right, root2?.right)
+        while !queue.isEmpty {
+            let (left, right) = queue.removeFirst()
+            if left == nil || right == nil {
+                continue
+            }
+            
+            left?.val += (right?.val ?? 0)
+            
+            if left?.left == nil {
+                left?.left = right?.left
+            } else {
+                queue.append((left?.left, right?.left))
+            }
+            
+            if left?.right == nil {
+                left?.right = right?.right
+            } else {
+                queue.append((left?.right, right?.right))
+            }
+        }
         return root1
     }
-    
     
 }
 
