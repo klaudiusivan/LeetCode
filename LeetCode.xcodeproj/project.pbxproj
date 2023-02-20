@@ -22,6 +22,7 @@
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
 		F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */; };
+		F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermutationInStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationInStringTests.swift; sourceTree = "<group>"; };
 		F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MergeTwoBinaryTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTwoBinaryTreesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8EA40D6298BF76300E803A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F8328D29A3A4B300EDCE2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,6 +306,7 @@
 				F8AD3AE6299BC5410040928D /* PermutationInStringTests */,
 				F84717AF299F99D400357D74 /* FloodFillTests */,
 				F84717BA29A1062700357D74 /* MaxAreaofIslandTests */,
+				F8F8329129A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -318,6 +329,7 @@
 				F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */,
 				F84717AE299F99D400357D74 /* FloodFillTests.xctest */,
 				F84717B929A1062700357D74 /* MaxAreaofIslandTests.xctest */,
+				F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,6 +340,14 @@
 				F88388F5298BF8C700C401FC /* BinarySearchTests.swift */,
 			);
 			path = BinarySearchTests;
+			sourceTree = "<group>";
+		};
+		F8F8329129A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */,
+			);
+			path = MergeTwoBinaryTreesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,6 +608,23 @@
 			productReference = F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8F8328F29A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F8329629A3A4B300EDCE2D /* Build configuration list for PBXNativeTarget "MergeTwoBinaryTreesTests" */;
+			buildPhases = (
+				F8F8328C29A3A4B300EDCE2D /* Sources */,
+				F8F8328D29A3A4B300EDCE2D /* Frameworks */,
+				F8F8328E29A3A4B300EDCE2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MergeTwoBinaryTreesTests;
+			productName = MergeTwoBinaryTreesTests;
+			productReference = F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -643,6 +680,9 @@
 					F8EA40D8298BF76300E803A1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F8F8328F29A3A4B300EDCE2D = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = F8EA40B1298BF71500E803A1 /* Build configuration list for PBXProject "LeetCode" */;
@@ -673,6 +713,7 @@
 				F8AD3AE4299BC5410040928D /* PermutationInStringTests */,
 				F84717AD299F99D400357D74 /* FloodFillTests */,
 				F84717B829A1062700357D74 /* MaxAreaofIslandTests */,
+				F8F8328F29A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -777,6 +818,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8EA40D7298BF76300E803A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F8328E29A3A4B300EDCE2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -903,6 +951,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F8328C29A3A4B300EDCE2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1478,6 +1534,36 @@
 			};
 			name = Release;
 		};
+		F8F8329429A3A4B300EDCE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MergeTwoBinaryTreesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8F8329529A3A4B300EDCE2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99HL3H54QB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MergeTwoBinaryTreesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1621,6 +1707,15 @@
 			buildConfigurations = (
 				F8EA40DE298BF76300E803A1 /* Debug */,
 				F8EA40DF298BF76300E803A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F8329629A3A4B300EDCE2D /* Build configuration list for PBXNativeTarget "MergeTwoBinaryTreesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F8329429A3A4B300EDCE2D /* Debug */,
+				F8F8329529A3A4B300EDCE2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
