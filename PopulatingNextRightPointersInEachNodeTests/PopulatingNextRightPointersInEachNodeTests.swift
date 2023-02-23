@@ -9,7 +9,14 @@ import XCTest
 
 
 // Definition for a Node.
-public class Node {
+public class Node: Equatable {
+    public static func == (lhs: Node, rhs: Node) -> Bool {
+        lhs.val == rhs.val &&
+        lhs.left == rhs.left &&
+        lhs.right == rhs.right &&
+        lhs.next == rhs.next
+    }
+    
     public var val: Int
     public var left: Node?
     public var right: Node?
@@ -25,7 +32,14 @@ public class Node {
 
 class Solution {
     func connect(_ root: Node?) -> Node? {
-        return root
+        guard let notNilRoot = root else {
+            return nil
+        }
+        notNilRoot.left?.next = notNilRoot.right
+        notNilRoot.right?.next = notNilRoot.next?.left
+        let _ = connect(notNilRoot.left)
+        let _ = connect(notNilRoot.right)
+        return notNilRoot
     }
 }
 
@@ -60,5 +74,33 @@ final class PopulatingNextRightPointersInEachNodeTests: XCTestCase {
         let result = sut.connect(nil)
         
         XCTAssertNil(result)
+    }
+    
+    func test_connect_shouldReturnRootWithNextRightNode() {
+        
+        let sut = Solution()
+        let root = Node(1)
+        root.left = Node(2)
+        root.right = Node(3)
+        root.left?.left = Node(4)
+        root.left?.right = Node(5)
+        root.right?.left = Node(6)
+        root.right?.right = Node(7)
+        
+        let exp = Node(1)
+        exp.left = Node(2)
+        exp.right = Node(3)
+        exp.left?.left = Node(4)
+        exp.left?.right = Node(5)
+        exp.right?.left = Node(6)
+        exp.right?.right = Node(7)
+        exp.left?.next = root.right
+        exp.left?.left?.next = root.left?.right
+        exp.left?.right?.next = root.right?.left
+        exp.right?.left?.next = root.right?.right
+        
+        let result = sut.connect(root)
+        
+        XCTAssertEqual(result, exp)
     }
 }
