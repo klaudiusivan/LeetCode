@@ -106,4 +106,12 @@ final class Matrix01Tests: XCTestCase {
         
         XCTAssertEqual(result, [[2,1,0]])
     }
+    
+    func test_updateMatrix_case2() {
+        let sut = Solution()
+        
+        let result = sut.updateMatrix([[0,0,0],[0,1,0],[1,1,1]])
+        
+        XCTAssertEqual(result, [[0,0,0],[0,1,0],[1,2,1]])
+    }
 }
