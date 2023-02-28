@@ -34,11 +34,19 @@ class Solution {
                 let (nextRow, nextColumn) = (row + direction[index], column + direction[index + 1])
                 print("next row: \(nextRow)")
                 print("next Column: \(nextColumn)")
+                print("current Matrix")
+                
+                mat.forEach(
+                    {
+                        print("\($0)")
+                    }
+                )
+                
                 if nextRow < 0 || nextRow == rowCount || nextColumn < 0  || nextColumn == columnCount || mat[nextRow][nextColumn] != -1 {
                     continue
                 }
-                
                 mat[nextRow][nextColumn] = mat[row][column] + 1
+               
                 queue.append((nextRow, nextColumn))
             }
         }
