@@ -24,6 +24,7 @@
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
 		F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */; };
+		F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */; };
 		F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
 		F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermutationInStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationInStringTests.swift; sourceTree = "<group>"; };
+		F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottingOrangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottingOrangesTests.swift; sourceTree = "<group>"; };
 		F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MergeTwoBinaryTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTwoBinaryTreesTests.swift; sourceTree = "<group>"; };
@@ -173,6 +176,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8AD3AE2299BC5410040928D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B2E86C29AE4D92002B2A14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,6 +334,14 @@
 			path = PermutationInStringTests;
 			sourceTree = "<group>";
 		};
+		F8B2E87029AE4D92002B2A14 /* RottingOrangesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */,
+			);
+			path = RottingOrangesTests;
+			sourceTree = "<group>";
+		};
 		F8EA40AD298BF71500E803A1 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +363,7 @@
 				F8F8329129A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */,
 				F85F776929A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests */,
 				F82FCB7A29A7A9E4005ACD7F /* Matrix01Tests */,
+				F8B2E87029AE4D92002B2A14 /* RottingOrangesTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -370,6 +389,7 @@
 				F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */,
 				F85F776829A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests.xctest */,
 				F82FCB7929A7A9E3005ACD7F /* Matrix01Tests.xctest */,
+				F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -665,6 +685,23 @@
 			productReference = F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8B2E86E29AE4D92002B2A14 /* RottingOrangesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B2E87529AE4D92002B2A14 /* Build configuration list for PBXNativeTarget "RottingOrangesTests" */;
+			buildPhases = (
+				F8B2E86B29AE4D92002B2A14 /* Sources */,
+				F8B2E86C29AE4D92002B2A14 /* Frameworks */,
+				F8B2E86D29AE4D92002B2A14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RottingOrangesTests;
+			productName = RottingOrangesTests;
+			productReference = F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8EA40D8298BF76300E803A1 /* BinarySearchTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8EA40DD298BF76300E803A1 /* Build configuration list for PBXNativeTarget "BinarySearchTests" */;
@@ -757,6 +794,9 @@
 					F8AD3AE4299BC5410040928D = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F8B2E86E29AE4D92002B2A14 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F8EA40D8298BF76300E803A1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -796,6 +836,7 @@
 				F8F8328F29A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */,
 				F85F776729A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests */,
 				F82FCB7829A7A9E3005ACD7F /* Matrix01Tests */,
+				F8B2E86E29AE4D92002B2A14 /* RottingOrangesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -907,6 +948,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8AD3AE3299BC5410040928D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B2E86D29AE4D92002B2A14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1055,6 +1103,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B2E86B29AE4D92002B2A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1557,6 +1613,34 @@
 			};
 			name = Release;
 		};
+		F8B2E87329AE4D92002B2A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.RottingOrangesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8B2E87429AE4D92002B2A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.RottingOrangesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F8EA40C7298BF71500E803A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1879,6 +1963,15 @@
 			buildConfigurations = (
 				F8AD3AE9299BC5410040928D /* Debug */,
 				F8AD3AEA299BC5410040928D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B2E87529AE4D92002B2A14 /* Build configuration list for PBXNativeTarget "RottingOrangesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B2E87329AE4D92002B2A14 /* Debug */,
+				F8B2E87429AE4D92002B2A14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
