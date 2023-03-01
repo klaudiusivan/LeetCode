@@ -83,7 +83,7 @@ class Solution {
  Output: 4
  Example 2:
 
- Input: grid = [[2,1,1],[0,1,1],[1,0,1]]
+ Input: grid =
  Output: -1
  Explanation: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
  Example 3:
@@ -116,6 +116,16 @@ final class RottingOrangesTests: XCTestCase {
         let result = sut.orangesRotting([[2,1,1],
                                          [1,1,0],
                                          [0,1,1]])
+        
+        XCTAssertEqual(result, 4)
+    }
+    
+    func test_orangesRotting_shouldReturnMinusOneOnUnconnectedRottenTomatoes() {
+        let sut = Solution()
+        
+        let result = sut.orangesRotting([[2,1,1],
+                                         [0,1,1],
+                                         [1,0,1]])
         
         XCTAssertEqual(result, 4)
     }
