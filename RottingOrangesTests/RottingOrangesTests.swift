@@ -127,6 +127,6 @@ final class RottingOrangesTests: XCTestCase {
                                          [0,1,1],
                                          [1,0,1]])
         
-        XCTAssertEqual(result, 4)
+        XCTAssertEqual(result, -1)
     }
 }
