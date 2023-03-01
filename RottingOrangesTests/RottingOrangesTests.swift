@@ -9,9 +9,62 @@ import XCTest
 
 class Solution {
     func orangesRotting(_ grid: [[Int]]) -> Int {
-        return -1
+        var grid = grid
+        let rowCount = grid.count
+        let columnCount = grid.first?.count ?? 0
+        let direction: [Int] = [0,1,0,-1,0]
+        var queueRotten: [(row: Int, column:Int)] = []
+        
+        // get allFirstRotten Orange and count good orange to compare at end of operation
+        var goodOrangeCount: Int = 0
+        grid.enumerated().forEach({
+            let row = $0
+            $1.enumerated().forEach({
+                let column = $0
+                if $1 == 2 {
+                    queueRotten.append((row, column))
+                } else if $1 == 1 {
+                    goodOrangeCount += 1
+                }
+            })
+        })
+        
+        var timer: Int = 0
+        var newQueueRotten: [(row: Int, column:Int)] = []
+        var someOrangeAffected:[Bool] = []
+        while !queueRotten.isEmpty || !newQueueRotten.isEmpty {
+            let (row, column) = queueRotten.removeFirst()
+            
+            for index in 0..<4 {
+                let (nextRow, nextColumn) = (row + direction[index], column + direction[index + 1])
+                
+                if nextRow < 0 || nextRow == rowCount || nextColumn < 0 || nextColumn == columnCount || grid[nextRow][nextColumn] == 2 || grid[nextRow][nextColumn] == 0 {
+                    continue
+                }
+                
+                //next row && next column valid change to rotten
+                grid[nextRow][nextColumn] = 2
+                newQueueRotten.append((nextRow, nextColumn))
+                goodOrangeCount -= 1
+                someOrangeAffected.append(true)
+            }
+            
+            if queueRotten.isEmpty && someOrangeAffected.contains(true) {
+                timer += 1
+            }
+            
+            //refill que rotten oranges
+            if !newQueueRotten.isEmpty && queueRotten.isEmpty {
+                queueRotten = newQueueRotten
+                newQueueRotten = []
+                someOrangeAffected = []
+            }
+        }
+        
+        return (goodOrangeCount > 0 || grid.count == 0) ? -1 : timer
     }
 }
+
 
 /**
  
@@ -47,5 +100,23 @@ final class RottingOrangesTests: XCTestCase {
         let result = sut.orangesRotting([])
         
         XCTAssertEqual(result, -1)
+    }
+    
+    func test_orangesRotting_shouldReturnZeroOnOnlyRottenTomatoes() {
+        let sut = Solution()
+        
+        let result = sut.orangesRotting([[0,2]])
+        
+        XCTAssertEqual(result, 0)
+    }
+    
+    func test_orangesRotting_shouldReturn4ForGivenMatrixOranges() {
+        let sut = Solution()
+        
+        let result = sut.orangesRotting([[2,1,1],
+                                         [1,1,0],
+                                         [0,1,1]])
+        
+        XCTAssertEqual(result, 4)
     }
 }
