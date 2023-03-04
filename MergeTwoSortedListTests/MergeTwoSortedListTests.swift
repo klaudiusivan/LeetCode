@@ -25,7 +25,18 @@ public class ListNode: Equatable {
  
 class Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
-        return nil
+        if list1 == nil {
+            return list2
+        }
+        else if list2 == nil {
+            return list1
+        }
+        
+        if list1?.val ?? 0 < list2?.val ?? 0 {
+            return ListNode(list1!.val, mergeTwoLists(list1?.next, list2))
+        } else {
+            return ListNode(list2!.val, mergeTwoLists(list1, list2?.next))
+        }
     }
 }
 
@@ -53,11 +64,41 @@ class Solution {
 
  */
 final class MergeTwoSortedListTests: XCTestCase {
-    func test_merge_twoLists_shouldReturnNilOnEmptyInput() {
+    func test_mergeTwoLists_shouldReturnNilOnEmptyInput() {
         let sut = Solution()
         
         let result = sut.mergeTwoLists(nil, nil)
         
         XCTAssertNil(result)
+    }
+    
+    func test_mergeTwoLists_shouldReturnListTwoWithListOneNil() {
+        let sut = Solution()
+        
+        let result = sut.mergeTwoLists(nil, ListNode(0))
+        
+        XCTAssertEqual(result, ListNode(0))
+    }
+    
+    func test_mergeTwoLists_shouldReturnListOneWithListTwoNil() {
+        let sut = Solution()
+        
+        let result = sut.mergeTwoLists(ListNode(0), nil)
+        
+        XCTAssertEqual(result, ListNode(0))
+    }
+    
+    func test_mergeTwoList_shouldReturnMergeList() {
+        let sut = Solution()
+        
+        let result = sut.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))
+        
+        XCTAssertEqual(result, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(4)))))), "result: \(linkedListToArray(result)) not same with expected")
+    }
+    
+    // MARK: - Helper
+    func linkedListToArray(_ headNode: ListNode?) -> [Int] {
+        guard let headNode = headNode else { return [] }
+        return Array(sequence(first: headNode, next: \.next)).map({ $0.val })
     }
 }
