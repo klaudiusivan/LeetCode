@@ -23,6 +23,7 @@
 		F861E3C6299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861E3C5299276A1007DCB6F /* TwoSumInputArrayIsSortedTests.swift */; };
 		F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388F5298BF8C700C401FC /* BinarySearchTests.swift */; };
 		F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */; };
+		F8A4E89D29B30D79004FBF22 /* MergeTwoSortedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A4E89C29B30D79004FBF22 /* MergeTwoSortedListTests.swift */; };
 		F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */; };
 		F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */; };
 		F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */; };
@@ -60,6 +61,8 @@
 		F88388F5298BF8C700C401FC /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstBadVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88388FD298BFD1A00C401FC /* FirstBadVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstBadVersionTests.swift; sourceTree = "<group>"; };
+		F8A4E89A29B30D79004FBF22 /* MergeTwoSortedListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MergeTwoSortedListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A4E89C29B30D79004FBF22 /* MergeTwoSortedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTwoSortedListTests.swift; sourceTree = "<group>"; };
 		F8AD3AE5299BC5410040928D /* PermutationInStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermutationInStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationInStringTests.swift; sourceTree = "<group>"; };
 		F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottingOrangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +172,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F88388F8298BFD1A00C401FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A4E89729B30D79004FBF22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,6 +336,14 @@
 			path = FirstBadVersionTests;
 			sourceTree = "<group>";
 		};
+		F8A4E89B29B30D79004FBF22 /* MergeTwoSortedListTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8A4E89C29B30D79004FBF22 /* MergeTwoSortedListTests.swift */,
+			);
+			path = MergeTwoSortedListTests;
+			sourceTree = "<group>";
+		};
 		F8AD3AE6299BC5410040928D /* PermutationInStringTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +382,7 @@
 				F85F776929A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests */,
 				F82FCB7A29A7A9E4005ACD7F /* Matrix01Tests */,
 				F8B2E87029AE4D92002B2A14 /* RottingOrangesTests */,
+				F8A4E89B29B30D79004FBF22 /* MergeTwoSortedListTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -390,6 +409,7 @@
 				F85F776829A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests.xctest */,
 				F82FCB7929A7A9E3005ACD7F /* Matrix01Tests.xctest */,
 				F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */,
+				F8A4E89A29B30D79004FBF22 /* MergeTwoSortedListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -668,6 +688,23 @@
 			productReference = F88388FB298BFD1A00C401FC /* FirstBadVersionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8A4E89929B30D79004FBF22 /* MergeTwoSortedListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8A4E8A029B30D79004FBF22 /* Build configuration list for PBXNativeTarget "MergeTwoSortedListTests" */;
+			buildPhases = (
+				F8A4E89629B30D79004FBF22 /* Sources */,
+				F8A4E89729B30D79004FBF22 /* Frameworks */,
+				F8A4E89829B30D79004FBF22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MergeTwoSortedListTests;
+			productName = MergeTwoSortedListTests;
+			productReference = F8A4E89A29B30D79004FBF22 /* MergeTwoSortedListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8AD3AE4299BC5410040928D /* PermutationInStringTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8AD3AEB299BC5410040928D /* Build configuration list for PBXNativeTarget "PermutationInStringTests" */;
@@ -791,6 +828,9 @@
 					F88388FA298BFD1A00C401FC = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F8A4E89929B30D79004FBF22 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F8AD3AE4299BC5410040928D = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -837,6 +877,7 @@
 				F85F776729A51F27001E9688 /* PopulatingNextRightPointersInEachNodeTests */,
 				F82FCB7829A7A9E3005ACD7F /* Matrix01Tests */,
 				F8B2E86E29AE4D92002B2A14 /* RottingOrangesTests */,
+				F8A4E89929B30D79004FBF22 /* MergeTwoSortedListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -941,6 +982,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F88388F9298BFD1A00C401FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A4E89829B30D79004FBF22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1095,6 +1143,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88388FE298BFD1A00C401FC /* FirstBadVersionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A4E89629B30D79004FBF22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A4E89D29B30D79004FBF22 /* MergeTwoSortedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1583,6 +1639,34 @@
 			};
 			name = Release;
 		};
+		F8A4E89E29B30D79004FBF22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MergeTwoSortedListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8A4E89F29B30D79004FBF22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.MergeTwoSortedListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F8AD3AE9299BC5410040928D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1954,6 +2038,15 @@
 			buildConfigurations = (
 				F8838900298BFD1A00C401FC /* Debug */,
 				F8838901298BFD1A00C401FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8A4E8A029B30D79004FBF22 /* Build configuration list for PBXNativeTarget "MergeTwoSortedListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8A4E89E29B30D79004FBF22 /* Debug */,
+				F8A4E89F29B30D79004FBF22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
