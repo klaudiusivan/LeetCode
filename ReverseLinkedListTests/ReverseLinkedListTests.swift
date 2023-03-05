@@ -66,4 +66,12 @@ final class ReverseLinkedListTests: XCTestCase {
         
         XCTAssertEqual(result, .init(2, .init(1)))
     }
+    
+    func test_reverseList_shouldReturnReverseList54321() {
+        let sut = Solution()
+        
+        let result = sut.reverseList(.init(1, .init(2, .init(3, .init(4, .init(5))))))
+        
+        XCTAssertEqual(result, .init(.init(5, .init(4, .init(3, .init(2, .init(1)))))))
+    }
 }
