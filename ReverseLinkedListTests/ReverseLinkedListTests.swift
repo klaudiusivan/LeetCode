@@ -8,7 +8,12 @@
 import XCTest
 
 //Definition for singly-linked list.
-public class ListNode {
+public class ListNode: Equatable {
+    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs.val == rhs.val &&
+        lhs.next == rhs.next &&
+        lhs.next?.val == rhs.next?.val
+    }
     public var val: Int
     public var next: ListNode?
     public init() { self.val = 0; self.next = nil; }
@@ -18,7 +23,15 @@ public class ListNode {
 
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
-        return nil
+     
+        if head == nil || head?.next == nil {
+            return head
+        } else {
+            let node = self.reverseList(head?.next)
+            head?.next?.next = head
+            head?.next = nil
+            return node
+        }
     }
 }
 
@@ -44,5 +57,13 @@ final class ReverseLinkedListTests: XCTestCase {
         let result = sut.reverseList(nil)
         
         XCTAssertNil(result)
+    }
+    
+    func test_reverseList_shouldReturnReverseList2andOne() {
+        let sut = Solution()
+        
+        let result = sut.reverseList(.init(1, .init(2)))
+        
+        XCTAssertEqual(result, .init(2, .init(1)))
     }
 }
