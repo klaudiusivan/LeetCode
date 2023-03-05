@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F8068405298D57460066DE75 /* SearchInsertPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */; };
+		F814C2DE29B4B99500937EDB /* ReverseLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814C2DD29B4B99500937EDB /* ReverseLinkedListTests.swift */; };
 		F81FEE852993DCC700FB85C8 /* ReverseStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEE842993DCC700FB85C8 /* ReverseStringTests.swift */; };
 		F81FEE902993E00200FB85C8 /* ReverseWordsinaStringIIITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEE8F2993E00200FB85C8 /* ReverseWordsinaStringIIITests.swift */; };
 		F81FEEAF29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81FEEAE29952F1800FB85C8 /* MiddleoftheLinkedListTests.swift */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchInsertPositionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
+		F814C2DB29B4B99500937EDB /* ReverseLinkedListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseLinkedListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F814C2DD29B4B99500937EDB /* ReverseLinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseLinkedListTests.swift; sourceTree = "<group>"; };
 		F81FEE822993DCC600FB85C8 /* ReverseStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81FEE842993DCC700FB85C8 /* ReverseStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseStringTests.swift; sourceTree = "<group>"; };
 		F81FEE8D2993E00200FB85C8 /* ReverseWordsinaStringIIITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseWordsinaStringIIITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +77,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		F80683FF298D57460066DE75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F814C2D829B4B99500937EDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,6 +232,14 @@
 				F8068404298D57460066DE75 /* SearchInsertPositionTests.swift */,
 			);
 			path = SearchInsertPositionTests;
+			sourceTree = "<group>";
+		};
+		F814C2DC29B4B99500937EDB /* ReverseLinkedListTests */ = {
+			isa = PBXGroup;
+			children = (
+				F814C2DD29B4B99500937EDB /* ReverseLinkedListTests.swift */,
+			);
+			path = ReverseLinkedListTests;
 			sourceTree = "<group>";
 		};
 		F81FEE832993DCC700FB85C8 /* ReverseStringTests */ = {
@@ -383,6 +401,7 @@
 				F82FCB7A29A7A9E4005ACD7F /* Matrix01Tests */,
 				F8B2E87029AE4D92002B2A14 /* RottingOrangesTests */,
 				F8A4E89B29B30D79004FBF22 /* MergeTwoSortedListTests */,
+				F814C2DC29B4B99500937EDB /* ReverseLinkedListTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -410,6 +429,7 @@
 				F82FCB7929A7A9E3005ACD7F /* Matrix01Tests.xctest */,
 				F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */,
 				F8A4E89A29B30D79004FBF22 /* MergeTwoSortedListTests.xctest */,
+				F814C2DB29B4B99500937EDB /* ReverseLinkedListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -448,6 +468,23 @@
 			name = SearchInsertPositionTests;
 			productName = SearchInsertPositionTests;
 			productReference = F8068402298D57460066DE75 /* SearchInsertPositionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F814C2DA29B4B99500937EDB /* ReverseLinkedListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F814C2E129B4B99500937EDB /* Build configuration list for PBXNativeTarget "ReverseLinkedListTests" */;
+			buildPhases = (
+				F814C2D729B4B99500937EDB /* Sources */,
+				F814C2D829B4B99500937EDB /* Frameworks */,
+				F814C2D929B4B99500937EDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReverseLinkedListTests;
+			productName = ReverseLinkedListTests;
+			productReference = F814C2DB29B4B99500937EDB /* ReverseLinkedListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F81FEE812993DCC600FB85C8 /* ReverseStringTests */ = {
@@ -786,6 +823,9 @@
 					F8068401298D57460066DE75 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F814C2DA29B4B99500937EDB = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F81FEE812993DCC600FB85C8 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -878,12 +918,20 @@
 				F82FCB7829A7A9E3005ACD7F /* Matrix01Tests */,
 				F8B2E86E29AE4D92002B2A14 /* RottingOrangesTests */,
 				F8A4E89929B30D79004FBF22 /* MergeTwoSortedListTests */,
+				F814C2DA29B4B99500937EDB /* ReverseLinkedListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F8068400298D57460066DE75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F814C2D929B4B99500937EDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1031,6 +1079,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8068405298D57460066DE75 /* SearchInsertPositionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F814C2D729B4B99500937EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F814C2DE29B4B99500937EDB /* ReverseLinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,6 +1269,34 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.SearchInsertPositionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F814C2DF29B4B99500937EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.ReverseLinkedListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F814C2E029B4B99500937EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.ReverseLinkedListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1912,6 +1996,15 @@
 			buildConfigurations = (
 				F8068407298D57460066DE75 /* Debug */,
 				F8068408298D57460066DE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F814C2E129B4B99500937EDB /* Build configuration list for PBXNativeTarget "ReverseLinkedListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F814C2DF29B4B99500937EDB /* Debug */,
+				F814C2E029B4B99500937EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
