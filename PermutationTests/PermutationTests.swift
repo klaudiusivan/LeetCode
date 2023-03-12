@@ -8,8 +8,25 @@
 import XCTest
 
 class Solution {
-    func permute(_ nums: [Int]) -> [[Int]] {
-        
+    func permute(_ nums: [Int]) -> Set<[Int]> {
+        var result: Set<[Int]> = []
+        var nums: [Int] = nums
+        permuteWith(&nums, begin: 0, result: &result)
+        return result
+    }
+    
+    // permute num[begin..end]
+    // invariant: num[0..begin-1] have been fixed/permuted
+    private func permuteWith(_ nums: inout [Int], begin: Int, result: inout Set<[Int]>){
+        if begin >= nums.count {
+            result.insert(nums)
+        } else {
+            for i in 0..<nums.count {
+                nums.swapAt(begin, i)
+                permuteWith(&nums, begin: begin + 1, result: &result)
+                nums.swapAt(begin, i)
+            }
+        }
     }
 }
 
@@ -37,4 +54,19 @@ class Solution {
  */
 final class PermutationTests: XCTestCase {
 
+    func test_permute_shouldReturnOneValueOnNumsLengthIsOne() {
+        let sut = Solution()
+        
+        let result = sut.permute([1])
+        
+        XCTAssertEqual(result,[[1]])
+    }
+    
+    func test_permute_shouldReturnExpectedResult() {
+        let sut = Solution()
+        
+        let result = sut.permute([1,2,3])
+        
+        XCTAssertEqual(result,[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]])
+    }
 }
