@@ -8,12 +8,35 @@
 import XCTest
 
 class Solution {
-    func letterCasePermutation(_ s: String) -> [String] {
-        
-        return []
+    func letterCasePermutation(_ s: String) -> Set<String> {
+        guard !s.isEmpty else { return [] }
+        var results: Set<String> = []
+        var strings: [Character] = s.map({ $0 })
+        backtracking(characters: &strings, index: 0, results: &results)
+        return results
     }
     
-    
+    func backtracking(characters: inout [Character], index: Int, results: inout Set<String>) {
+        
+        if index >= characters.count {
+            results.insert(String(characters))
+            return
+        }
+        
+        if characters[index].asciiValue! >= Character("0").asciiValue! &&
+            characters[index].asciiValue! <= Character("9").asciiValue! {
+            backtracking(characters: &characters, index: index+1, results: &results)
+            return
+        }
+        
+        characters[index] = Character(characters[index].lowercased())
+        backtracking(characters: &characters, index: index+1, results: &results)
+        
+        characters[index] = Character(characters[index].uppercased())
+        backtracking(characters: &characters, index: index+1, results: &results)
+        
+        
+    }
 }
 
 /**
@@ -41,5 +64,13 @@ final class LetterCasePermutationTests: XCTestCase {
         let result = sut.letterCasePermutation("")
         
         XCTAssertEqual(result, [])
+    }
+    
+    func test_letterCasePermutation_shouldReturnExpectedOutput() {
+        let sut = Solution()
+        
+        let result = sut.letterCasePermutation("a1b2")
+        
+        XCTAssertEqual(result, ["a1b2","a1B2","A1b2","A1B2"])
     }
 }
