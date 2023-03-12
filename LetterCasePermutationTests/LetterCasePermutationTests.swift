@@ -35,5 +35,11 @@ class Solution {
  s consists of lowercase English letters, uppercase English letters, and digits.
  */
 final class LetterCasePermutationTests: XCTestCase {
-    
+    func test_letterCasePermutation_shouldReturnEmptyListOnEmptyS() {
+        let sut = Solution()
+        
+        let result = sut.letterCasePermutation("")
+        
+        XCTAssertEqual(result, [])
+    }
 }
