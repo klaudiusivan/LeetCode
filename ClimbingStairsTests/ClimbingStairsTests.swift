@@ -13,15 +13,15 @@ class Solution {
             return n
         }
         
-        var fib = [Int](repeating: 0, count: n+2)
-        fib[0] = 0
+        var fib = [Int](repeating: 0, count: n+1)
+        fib[0] = 1
         fib[1] = 1
         
-        for i in 2...n+1 {
+        for i in 2...n {
             fib[i] = fib[i-1] + fib[i-2]
         }
         
-        return fib[n+1]
+        return fib[n]
     }
 }
 
