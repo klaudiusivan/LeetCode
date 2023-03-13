@@ -9,7 +9,19 @@ import XCTest
 
 class Solution {
     func climbStairs(_ n: Int) -> Int {
-        return n
+        if n < 4 {
+            return n
+        }
+        
+        var fib = [Int](repeating: 0, count: n+2)
+        fib[0] = 0
+        fib[1] = 1
+        
+        for i in 2...n+1 {
+            fib[i] = fib[i-1] + fib[i-2]
+        }
+        
+        return fib[n+1]
     }
 }
 
@@ -32,6 +44,27 @@ class Solution {
  1. 1 step + 1 step + 1 step
  2. 1 step + 2 steps
  3. 2 steps + 1 step
+ 
+ Input: n = 4
+ Output: 3
+ Explanation: There are three ways to climb to the top.
+ 1. 1 step + 1 step + 1 step + 1 step
+ 2. 1 step + 2 steps + 1 step
+ 3. 2 steps + 1 step + 1 step
+ 4. 2 step + 2 step
+ 5. 1 step + 1 step + 2 step
+ 
+ Input: n = 5
+ Output: 3
+ Explanation: There are three ways to climb to the top.
+ 1. 1 step + 1 step + 1 step + 1 step + 1 step
+ 2. 1 step + 2 steps + 1 step + 1 step
+ 3. 2 steps + 1 step + 1 step + 1 step
+ 4. 2 step + 2 step + 1 step
+ 5. 1 step + 1 step + 2 step + 1 step
+ 6. 1 step + 1 step + 1 step + 2 step
+ 7. 1 +  2 + 2
+ 8. 2 + 1 + 2
   
 
  Constraints:
@@ -53,5 +86,13 @@ final class ClimbingStairsTests: XCTestCase {
         let result = sut.climbStairs(3)
         
         XCTAssertEqual(result, 3)
+    }
+    
+    func test_climbStairs_shouldReturn5In4Input() {
+        let sut = Solution()
+        
+        let result = sut.climbStairs(4)
+        
+        XCTAssertEqual(result, 5)
     }
 }
