@@ -9,7 +9,7 @@ import XCTest
 
 class Solution {
     func climbStairs(_ n: Int) -> Int {
-        return 0
+        return n
     }
 }
 
@@ -45,5 +45,13 @@ final class ClimbingStairsTests: XCTestCase {
         let result = sut.climbStairs(0)
         
         XCTAssertEqual(result, 0)
+    }
+    
+    func test_climbStairs_shouldReturn3On3Input() {
+        let sut = Solution()
+        
+        let result = sut.climbStairs(3)
+        
+        XCTAssertEqual(result, 3)
     }
 }
