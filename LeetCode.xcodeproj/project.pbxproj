@@ -30,6 +30,7 @@
 		F8A4E89D29B30D79004FBF22 /* MergeTwoSortedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A4E89C29B30D79004FBF22 /* MergeTwoSortedListTests.swift */; };
 		F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */; };
 		F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */; };
+		F8D0987229BF6A97008786F4 /* ClimbingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D0987129BF6A97008786F4 /* ClimbingStairsTests.swift */; };
 		F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationInStringTests.swift; sourceTree = "<group>"; };
 		F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottingOrangesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottingOrangesTests.swift; sourceTree = "<group>"; };
+		F8D0986F29BF6A97008786F4 /* ClimbingStairsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbingStairsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D0987129BF6A97008786F4 /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MergeTwoBinaryTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTwoBinaryTreesTests.swift; sourceTree = "<group>"; };
@@ -233,6 +236,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8B2E86C29AE4D92002B2A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D0986C29BF6A97008786F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,6 +442,14 @@
 			path = RottingOrangesTests;
 			sourceTree = "<group>";
 		};
+		F8D0987029BF6A97008786F4 /* ClimbingStairsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8D0987129BF6A97008786F4 /* ClimbingStairsTests.swift */,
+			);
+			path = ClimbingStairsTests;
+			sourceTree = "<group>";
+		};
 		F8EA40AD298BF71500E803A1 = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +477,7 @@
 				F832FA0129B619F9000FEB79 /* CombinationTests */,
 				F8362FB529BB6E2100FD560E /* PermutationTests */,
 				F812D26429BD91B800ACBC08 /* LetterCasePermutationTests */,
+				F8D0987029BF6A97008786F4 /* ClimbingStairsTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -490,6 +509,7 @@
 				F832FA0029B619F9000FEB79 /* CombinationTests.xctest */,
 				F8362FB429BB6E2100FD560E /* PermutationTests.xctest */,
 				F812D26329BD91B800ACBC08 /* LetterCasePermutationTests.xctest */,
+				F8D0986F29BF6A97008786F4 /* ClimbingStairsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -887,6 +907,23 @@
 			productReference = F8B2E86F29AE4D92002B2A14 /* RottingOrangesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8D0986E29BF6A97008786F4 /* ClimbingStairsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D0987329BF6A97008786F4 /* Build configuration list for PBXNativeTarget "ClimbingStairsTests" */;
+			buildPhases = (
+				F8D0986B29BF6A97008786F4 /* Sources */,
+				F8D0986C29BF6A97008786F4 /* Frameworks */,
+				F8D0986D29BF6A97008786F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClimbingStairsTests;
+			productName = ClimbingStairsTests;
+			productReference = F8D0986F29BF6A97008786F4 /* ClimbingStairsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8EA40D8298BF76300E803A1 /* BinarySearchTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8EA40DD298BF76300E803A1 /* Build configuration list for PBXNativeTarget "BinarySearchTests" */;
@@ -997,6 +1034,9 @@
 					F8B2E86E29AE4D92002B2A14 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F8D0986E29BF6A97008786F4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F8EA40D8298BF76300E803A1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -1042,6 +1082,7 @@
 				F832F9FF29B619F9000FEB79 /* CombinationTests */,
 				F8362FB329BB6E2100FD560E /* PermutationTests */,
 				F812D26229BD91B800ACBC08 /* LetterCasePermutationTests */,
+				F8D0986E29BF6A97008786F4 /* ClimbingStairsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1195,6 +1236,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8B2E86D29AE4D92002B2A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D0986D29BF6A97008786F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1391,6 +1439,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8D0986B29BF6A97008786F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D0987229BF6A97008786F4 /* ClimbingStairsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2061,6 +2117,34 @@
 			};
 			name = Release;
 		};
+		F8D0987429BF6A97008786F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.ClimbingStairsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8D0987529BF6A97008786F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.ClimbingStairsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F8EA40C7298BF71500E803A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2437,6 +2521,15 @@
 			buildConfigurations = (
 				F8B2E87329AE4D92002B2A14 /* Debug */,
 				F8B2E87429AE4D92002B2A14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D0987329BF6A97008786F4 /* Build configuration list for PBXNativeTarget "ClimbingStairsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D0987429BF6A97008786F4 /* Debug */,
+				F8D0987529BF6A97008786F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
