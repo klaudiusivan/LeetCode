@@ -95,4 +95,12 @@ final class ClimbingStairsTests: XCTestCase {
         
         XCTAssertEqual(result, 5)
     }
+    
+    func test_climbStairs_shouldReturn8In5Input() {
+        let sut = Solution()
+        
+        let result = sut.climbStairs(5)
+        
+        XCTAssertEqual(result, 8)
+    }
 }
