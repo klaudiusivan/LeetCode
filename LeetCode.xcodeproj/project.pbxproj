@@ -32,6 +32,7 @@
 		F8AD3AE8299BC5410040928D /* PermutationInStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD3AE7299BC5410040928D /* PermutationInStringTests.swift */; };
 		F8B2E87229AE4D92002B2A14 /* RottingOrangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E87129AE4D92002B2A14 /* RottingOrangesTests.swift */; };
 		F8D0987229BF6A97008786F4 /* ClimbingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D0987129BF6A97008786F4 /* ClimbingStairsTests.swift */; };
+		F8F6186029C5F5AB004A83FC /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6185F29C5F5AB004A83FC /* TriangleTests.swift */; };
 		F8F8329329A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		F8D0986F29BF6A97008786F4 /* ClimbingStairsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbingStairsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D0987129BF6A97008786F4 /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinarySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F6185D29C5F5AB004A83FC /* TriangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriangleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F6185F29C5F5AB004A83FC /* TriangleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 		F8F8329029A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MergeTwoBinaryTreesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F8329229A3A4B300EDCE2D /* MergeTwoBinaryTreesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeTwoBinaryTreesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +263,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8EA40D6298BF76300E803A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F6185A29C5F5AA004A83FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,6 +507,7 @@
 				F812D26429BD91B800ACBC08 /* LetterCasePermutationTests */,
 				F8D0987029BF6A97008786F4 /* ClimbingStairsTests */,
 				F899176429BF703D00305320 /* HouseRobberTests */,
+				F8F6185E29C5F5AB004A83FC /* TriangleTests */,
 				F8EA40B8298BF71500E803A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -530,6 +541,7 @@
 				F812D26329BD91B800ACBC08 /* LetterCasePermutationTests.xctest */,
 				F8D0986F29BF6A97008786F4 /* ClimbingStairsTests.xctest */,
 				F899176329BF703D00305320 /* HouseRobberTests.xctest */,
+				F8F6185D29C5F5AB004A83FC /* TriangleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -540,6 +552,14 @@
 				F88388F5298BF8C700C401FC /* BinarySearchTests.swift */,
 			);
 			path = BinarySearchTests;
+			sourceTree = "<group>";
+		};
+		F8F6185E29C5F5AB004A83FC /* TriangleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8F6185F29C5F5AB004A83FC /* TriangleTests.swift */,
+			);
+			path = TriangleTests;
 			sourceTree = "<group>";
 		};
 		F8F8329129A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */ = {
@@ -978,6 +998,23 @@
 			productReference = F8EA40D9298BF76300E803A1 /* BinarySearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8F6185C29C5F5AA004A83FC /* TriangleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F6186329C5F5AB004A83FC /* Build configuration list for PBXNativeTarget "TriangleTests" */;
+			buildPhases = (
+				F8F6185929C5F5AA004A83FC /* Sources */,
+				F8F6185A29C5F5AA004A83FC /* Frameworks */,
+				F8F6185B29C5F5AA004A83FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TriangleTests;
+			productName = TriangleTests;
+			productReference = F8F6185D29C5F5AB004A83FC /* TriangleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8F8328F29A3A4B300EDCE2D /* MergeTwoBinaryTreesTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8F8329629A3A4B300EDCE2D /* Build configuration list for PBXNativeTarget "MergeTwoBinaryTreesTests" */;
@@ -1080,6 +1117,9 @@
 					F8EA40D8298BF76300E803A1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					F8F6185C29C5F5AA004A83FC = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					F8F8328F29A3A4B300EDCE2D = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -1124,6 +1164,7 @@
 				F812D26229BD91B800ACBC08 /* LetterCasePermutationTests */,
 				F8D0986E29BF6A97008786F4 /* ClimbingStairsTests */,
 				F899176229BF703D00305320 /* HouseRobberTests */,
+				F8F6185C29C5F5AA004A83FC /* TriangleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1298,6 +1339,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F8EA40D7298BF76300E803A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F6185B29C5F5AA004A83FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1511,6 +1559,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88388F6298BF8C700C401FC /* BinarySearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F6185929C5F5AA004A83FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F6186029C5F5AB004A83FC /* TriangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2378,6 +2434,34 @@
 			};
 			name = Release;
 		};
+		F8F6186129C5F5AB004A83FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.TriangleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8F6186229C5F5AB004A83FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klau.studio.TriangleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F8F8329429A3A4B300EDCE2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2641,6 +2725,15 @@
 			buildConfigurations = (
 				F8EA40DE298BF76300E803A1 /* Debug */,
 				F8EA40DF298BF76300E803A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F6186329C5F5AB004A83FC /* Build configuration list for PBXNativeTarget "TriangleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F6186129C5F5AB004A83FC /* Debug */,
+				F8F6186229C5F5AB004A83FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
