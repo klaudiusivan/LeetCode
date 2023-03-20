@@ -40,11 +40,15 @@ class Solution {
   
 */
 final class PowerOfTwoTests: XCTestCase {
-    func test_isPowerOfTwo_shouldReturnFalseOnNis0() {
+    func test_isPowerOfTwo_shouldReturnFalseOnNIs0() {
         let sut = Solution()
         
         let result = sut.isPowerOfTwo(0)
         
         XCTAssertFalse(result)
+    }
+    
+    func test_isPowerOfTwo_shouldReturnFalseOnNIs6() {
+        XCTAssertFalse(Solution().isPowerOfTwo(6))
     }
 }
