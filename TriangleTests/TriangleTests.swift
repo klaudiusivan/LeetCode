@@ -9,7 +9,17 @@ import XCTest
 
 class Solution {
     func minimumTotal(_ triangle: [[Int]]) -> Int {
-        return triangle.first?.first ?? 0
+        let n = triangle.count
+        var minimumLength: [Int] = triangle.last!
+        
+        for layer in stride(from: n-2, through: 0, by: -1) {
+            
+            for i in 0..<triangle[layer].count {
+                minimumLength[i] = min(minimumLength[i], minimumLength[i+1]) + triangle[layer][i]
+            }
+            
+        }
+        return minimumLength[0]
     }
 }
 
@@ -49,4 +59,11 @@ final class TriangleTests: XCTestCase {
         XCTAssertEqual(result, 1)
     }
     
+    func test_minimumTotal_shouldReturn11OnGivenTriangleArray() {
+        let sut = Solution()
+        
+        let result = sut.minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]])
+        
+        XCTAssertEqual(result, 11)
+    }
 }
